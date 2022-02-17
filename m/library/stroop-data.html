@@ -1,0 +1,19 @@
+<section>
+    VmInclude:__CURRENT_PATH__/../../library/grid.v1h.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__COMPONENT__/g/grid.01.js
+        VmInclude:__CURRENT_PATH__/../../library/shared-data.js
+        //-------------------------------------
+        $('#title__ID').text('Stroop')
+        //-------------------------------------
+		var fields="col_raw_time,col_ass,word_raw_time,word_ass,inhab_naming_raw_time,inhab_naming_ass,inhab_switching_raw_time,inhab_switching_ass";
+        m.fields="_Status,_Notes,_Participant_ID,Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__COMPONENT__/g/grid.01.css
+</style>
