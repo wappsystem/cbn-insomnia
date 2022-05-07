@@ -1,0 +1,21 @@
+<section>
+    VmInclude:__CURRENT_PATH__/grid.v1h.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__COMPONENT__/g/grid.01.js
+        VmInclude:__CURRENT_PATH__/shared-data.js
+        //-------------------------------------
+        m.load=function(){
+            $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
+        }
+        //-------------------------------------
+        var fields="DISS_1,DISS_2,DISS_3,DISS_4,DISS_5,DISS_6,DISS_7,DISS_8,DISS_9,DISS_10,DISS_11,DISS_12,DISS_13,DISS_14,DISS_15,DISS_16,DISS_17,DISS_18,DISS_19,DISS_20";
+        m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__COMPONENT__/g/grid.01.css
+</style>

@@ -1,0 +1,159 @@
+<div id=D__ID>
+    <!--third html start -->
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id="F__ID">
+                            <h3 id=title__ID></h3>
+                            <!-- participant part for all tsak forms -------------------->
+                            <div id="participant_div__ID" >
+                                <div class="form-group">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Participant</span>
+                                            <input type=text name="Participant" class=form-control id=Participant__ID
+                                                data-id="Participant" />
+                                        </label><br>
+                                        <label><span class="">Participant ID</span>
+                                            <input type=text name="Participant_uid" class=form-control readonly />
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function F__ID() {
+            //-------------------------------------
+            VmInclude: '__COMPONENT__/f/form.01.js'
+            VmInclude: '__CURRENT_PATH__/shared-form.js'
+
+        }
+      //------------------------------------
+    </script>
+    <style>
+        #D__ID #indicator__ID {
+            margin-left: 91px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 20px;
+            height: 5px;
+            background-color: red;
+            z-index: 200
+        }
+#F__ID .vas {
+    position: relative;
+    height: 419px;
+    width: 200px;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -ms-flex-align: stretch;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+    text-align: center;
+}
+#F__ID .vas__footer, .vas__header {
+    -ms-flex-positive: 0;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    font-weight: 700;
+    max-width: 150px;
+    margin: 0 auto;
+}
+#F__ID .vas__body {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -ms-flex-align: stretch;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    -ms-flex-positive: 1;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    padding: 10px;
+    margin: 0 auto;
+}
+#F__ID .vas-tick {
+    position: relative;
+    text-align: center;
+    -ms-flex: 1;
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#F__ID .vas-tick__value {
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+    -webkit-transform: translateY(-50%) translateX(-40px);
+    transform: translateY(-50%) translateX(-40px);
+    visibility: hidden;
+}
+#F__ID .vas-tick--step .vas-tick__value {
+    opacity: 1;
+    visibility: visible;
+}
+#F__ID .vas-tick__line {
+    opacity: 1;
+    visibility: visible;
+    width: 10px;
+    height: 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+#F__ID .vas-tick--step .vas-tick__line {
+    width: 28px;
+    height: 2px;
+
+}
+#F__ID .vas-tick--step1 .vas-tick__line {
+    width: 15px;
+    height: 1px;
+}
+#yht__ID{
+        padding-top:0;
+    }
+@media (min-width: 1024x) {
+    #yht__ID{
+        padding-top:35px;
+    }
+}
+
+
+        VmInclude:__CURRENT_PATH__/wappsystem-form.css
+    </style>
+</div>

@@ -1,0 +1,156 @@
+<div id=D__ID>
+    <!--third html start -->
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id="F__ID">
+                            <h3 id=title__ID></h3>
+                            <!-- participant part for all tsak forms -------------------->
+                            <div id="participant_div__ID">
+                                <div class="form-group">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Participant</span>
+                                            <input type=text name="Participant" class=form-control id=Participant__ID
+                                                data-id="Participant" />
+                                        </label><br>
+                                        <label><span class="">Participant ID</span>
+                                            <input type=text name="Participant_uid" class=form-control readonly />
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <label><span class="">What is your date of birth?</span></label>
+                                        <fieldset class="pl-4">
+                                        <label><span class=""></span>
+                                            <input type="date" name="DOB" class="form-control" placeholder="" required>
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <label><span class="">What is your biological gender?</span></label>
+                                    <fieldset class="pl-4">
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="gender" value="Male" required>
+                                            <span class="checkmark"></span> Male</label>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="gender" value="Female">
+                                            <span class="checkmark"></span> Female </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <label><span class="">What is your postcode?</span></label>
+                                        <fieldset class="pl-4">
+                                        <label><span class=""></span>
+                                            <input type="number" max="9999" min="1000" name="postcode" class="form-control" placeholder="" required>
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <label><span class="">What is your current employment status?</span></label>
+                                    <fieldset class="pl-4">
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="employment" value="retired" required>
+                                            <span class="checkmark"></span>Retired
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="employment" value="full-time">
+                                            <span class="checkmark"></span>Full-time employment 
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="employment" value="part-time">
+                                            <span class="checkmark"></span>Casually or Part-time employment 
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="employment" value="student">
+                                            <span class="checkmark"></span>Student 
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="employment" value="carer">
+                                            <span class="checkmark"></span>Full-time homemaker or carer 
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="employment" value="unemployment">
+                                            <span class="checkmark"></span>Unemployment 
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <label><span class="">What is your highest level of education?</span></label>
+                                    <fieldset class="pl-4">
+                                        <label class="radiobuttons">Less than Year 12 or equivalent
+                                            <input type="radio" name="education" value="y12-" required>
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                        <label class="radiobuttons">Year 12 or equivalent
+                                            <input type="radio" name="education" value="y12">
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                        <label class="radiobuttons">Vocational Qualification i.e. TAFE
+                                            <input type="radio" name="education" value="vocational">
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                        <label class="radiobuttons">Associate diploma
+                                            <input type="radio" name="education" value="associate">
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                        <label class="radiobuttons">Undergraduate diploma
+                                            <input type="radio" name="education" value="undergraduate">
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                        <label class="radiobuttons">Bachelor degree (including honours)
+                                            <input type="radio" name="education" value="bachelor">
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                        <label class="radiobuttons">Postgraduate diploma
+                                            <input type="radio" name="education" value="postgraduate">
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                        <label class="radiobuttons">Master’s degree
+                                            <input type="radio" name="education" value="master">
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                        <label class="radiobuttons">Doctorate
+                                            <input type="radio" name="education" value="doctorate">
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="" style="text-align:right">
+                                <div class="">
+                                    <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function F__ID() {
+            VmInclude: '__COMPONENT__/f/form.01.js'
+            //---------------------------------------
+        }
+    </script>
+    <style>
+        #submit_box__ID {
+            text-align: right;
+        }
+        VmInclude:__CURRENT_PATH__/wappsystem-form.css
+    </style>
+</div>
