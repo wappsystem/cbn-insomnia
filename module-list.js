@@ -12,7 +12,7 @@
                                                 child_panel:"panel-child-cupid",
                                                 questionnaire_setup:"online-questionnaire-setup-cupid",
                                                 online_questionnaire:"online-questionnaire-app-cupid",
-                                                participant_id:{field1:"Subject_ID",field2:"Subject_Initials"},
+                                                participant_id:{field1:"Participant"},
                                                 participant_export:"ID,Subject_ID,Screening_Number,Randomisation_Number,Subject_Initials,Gender,DOB"
                                             },
         "participant-form":   		        {url:"$H/m/participant/participant-form.html",Table:"cupid-participant"},
