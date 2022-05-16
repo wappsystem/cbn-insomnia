@@ -26,16 +26,23 @@
                             <div class="form-group">
                                 <div class="questiongroup">
                                     <fieldset class="subquestions">
-                                        <label><span class="">During your visit, did you experience any negative
-                                                side-effects?</span>
-                                            <input id="Neg_side_effects_Yes__ID" name="Neg_side_effects" type="radio">
-                                            <label class="rd_btn" for="Neg_side_effects_Yes__ID">Yes</label>
-                                            <input id="Neg_side_effects_No__ID" name="Neg_side_effects" type="radio">
-                                            <label class="rd_btn" for="Neg_side_effects_No__ID">No</label>
-                                        </label>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-6">
+                                                <label><span class="">During your visit, did you experience any negative
+                                                        side-effects?</span></label>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Neg_side_effects_Yes__ID" name="Neg_side_effects"
+                                                    type="radio" value="Yes">
+                                                <label class="rd_btn" for="Neg_side_effects_Yes__ID">Yes</label>
+                                                <input id="Neg_side_effects_No__ID" name="Neg_side_effects"
+                                                    type="radio" value="No">
+                                                <label class="rd_btn" for="Neg_side_effects_No__ID">No</label>
+                                            </div>
+                                        </div>
                                     </fieldset>
                                 </div>
-                                <div id="side_effects__ID" style="display:xnone">
+                                <div id="side_effects__ID" style="display:none">
                                     <div class="form-group">
                                         <div class="questiongroup">
                                             <fieldset class="">
@@ -52,21 +59,271 @@
                                 <h4>Did you experience any of the following symptoms?</h4>
                                 <div class="questiongroup">
                                     <fieldset class="subquestions">
-                                        <label><span class="">Dizziness</span>
-                                            <input id="toggle-on" name="Dizziness" type="radio">
-                                            <label class="rd_btn" for="toggle-on">Yes</label>
-                                            <input id="toggle-off" name="Dizziness" type="radio">
-                                            <label class="rd_btn" for="toggle-off">No</label>
-                                            <label><span class="">Onset Time</span>
-                                                <input class="form-control" type="time" name="Onset_Time">
-                                            </label><br>
-                                            <label><span class="">Onset Date</span>
-                                                <input class="form-control" type="date" name="Onset_Date">
-                                            </label>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-3">
+                                                <label><span class="">Dizziness</span></label>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Dizziness_Yes__ID" name="Dizziness" type="radio" value="Yes">
+                                                <label class="rd_btn" for="Dizziness_Yes__ID">Yes</label>
+                                                <input id="Dizziness_No__ID" name="Dizziness" type="radio" value="No">
+                                                <label class="rd_btn" for="Dizziness_No__ID">No</label>
+                                            </div>
+                                            <div id=Dizziness_Onset__ID class="col-sm-12 col-md-5" style="display:none">
+                                                <label><span class="">Onset Time</span>
+                                                    <input class="form-control" type="time" name="Dizziness_Onset_Time">
+                                                </label><br>
+                                                <label><span class="">Onset Date</span>
+                                                    <input class="form-control" type="date" name="Dizziness_Onset_Date">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-3">
+                                                <label><span class="">Nausea/vomiting</span></label>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Nausea_Yes__ID" name="Nausea" type="radio" value="Yes">
+                                                <label class="rd_btn" for="Nausea_Yes__ID">Yes</label>
+                                                <input id="Nausea_No__ID" name="Nausea" type="radio" value="No">
+                                                <label class="rd_btn" for="Nausea_No__ID">No</label>
+                                            </div>
+                                            <div id=Nausea_Onset__ID class="col-sm-12 col-md-5" style="display:none">
+                                                <label><span class="">Onset Time</span>
+                                                    <input class="form-control" type="time" name="Nausea_Onset_Time">
+                                                </label><br>
+                                                <label><span class="">Onset Date</span>
+                                                    <input class="form-control" type="date" name="Nausea_Onset_Date">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-3">
+                                                <label><span class="">Fatigue</span></label>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Fatigue_Yes__ID" name="Fatigue" type="radio" value="Yes">
+                                                <label class="rd_btn" for="Fatigue_Yes__ID">Yes</label>
+                                                <input id="Fatigue_No__ID" name="Fatigue" type="radio" value="No">
+                                                <label class="rd_btn" for="Fatigue_No__ID">No</label>
+                                            </div>
+                                            <div id=Fatigue_Onset__ID class="col-sm-12 col-md-5" style="display:none">
+                                                <label><span class="">Onset Time</span>
+                                                    <input class="form-control" type="time" name="Fatigue_Onset_Time">
+                                                </label><br>
+                                                <label><span class="">Onset Date</span>
+                                                    <input class="form-control" type="date" name="Fatigue_Onset_Date">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-3">
+                                                <label><span class="">Dry mouth</span></label>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Dry_mouth_Yes__ID" name="Dry_mouth" type="radio" value="Yes">
+                                                <label class="rd_btn" for="Dry_mouth_Yes__ID">Yes</label>
+                                                <input id="Dry_mouth_No__ID" name="Dry_mouth" type="radio"  value="No">
+                                                <label class="rd_btn" for="Dry_mouth_No__ID">No</label>
+                                            </div>
+                                            <div id=Dry_mouth_Onset__ID class="col-sm-12 col-md-5" style="display:none">
+                                                <label><span class="">Onset Time</span>
+                                                    <input class="form-control" type="time" name="Dry_mouth_Onset_Time">
+                                                </label><br>
+                                                <label><span class="">Onset Date</span>
+                                                    <input class="form-control" type="date" name="Dry_mouth_Onset_Date">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-3">
+                                                <label><span class="">Drowsiness</span></label>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Drowsiness_Yes__ID" name="Drowsiness" type="radio" value="Yes">
+                                                <label class="rd_btn" for="Drowsiness_Yes__ID">Yes</label>
+                                                <input id="Drowsiness_No__ID" name="Drowsiness" type="radio" value="No">
+                                                <label class="rd_btn" for="Drowsiness_No__ID">No</label>
+                                            </div>
+                                            <div id=Drowsiness_Onset__ID class="col-sm-12 col-md-5" style="display:none">
+                                                <label><span class="">Onset Time</span>
+                                                    <input class="form-control" type="time" name="Drowsiness_Onset_Time">
+                                                </label><br>
+                                                <label><span class="">Onset Date</span>
+                                                    <input class="form-control" type="date" name="Drowsiness_Onset_Date">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-3">
+                                                <label><span class="">Feeling drunk/intoxicated</span></label>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Intoxicated_Yes__ID" name="Intoxicated" type="radio" value="Yes">
+                                                <label class="rd_btn" for="Intoxicated_Yes__ID">Yes</label>
+                                                <input id="Intoxicated_No__ID" name="Intoxicated" type="radio" value="No">
+                                                <label class="rd_btn" for="Intoxicated_No__ID">No</label>
+                                            </div>
+                                            <div id=Intoxicated_Onset__ID class="col-sm-12 col-md-5" style="display:none">
+                                                <label><span class="">Onset Time</span>
+                                                    <input class="form-control" type="time" name="Intoxicated_Onset_Time">
+                                                </label><br>
+                                                <label><span class="">Onset Date</span>
+                                                    <input class="form-control" type="date" name="Intoxicated_Onset_Date">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-3">
+                                                <label><span class="">Disorientation/confusion</span></label>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Disorientation_Yes__ID" name="Disorientation" type="radio" value="Yes">
+                                                <label class="rd_btn" for="Disorientation_Yes__ID">Yes</label>
+                                                <input id="Disorientation_No__ID" name="Disorientation" type="radio" value="No">
+                                                <label class="rd_btn" for="Disorientation_No__ID">No</label>
+                                            </div>
+                                            <div id=Disorientation_Onset__ID class="col-sm-12 col-md-5" style="display:none">
+                                                <label><span class="">Onset Time</span>
+                                                    <input class="form-control" type="time" name="Disorientation_Onset_Time">
+                                                </label><br>
+                                                <label><span class="">Onset Date</span>
+                                                    <input class="form-control" type="date" name="Disorientation_Onset_Date">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-3">
+                                                <label><span class="">Lethargy</span></label>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Lethargy_Yes__ID" name="Lethargy" type="radio" value="Yes">
+                                                <label class="rd_btn" for="Lethargy_Yes__ID">Yes</label>
+                                                <input id="Lethargy_No__ID" name="Lethargy" type="radio" value="No">
+                                                <label class="rd_btn" for="Lethargy_No__ID">No</label>
+                                            </div>
+                                            <div id=Lethargy_Onset__ID class="col-sm-12 col-md-5" style="display:none">
+                                                <label><span class="">Onset Time</span>
+                                                    <input class="form-control" type="time" name="Lethargy_Onset_Time">
+                                                </label><br>
+                                                <label><span class="">Onset Date</span>
+                                                    <input class="form-control" type="date" name="Lethargy_Onset_Date">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-3">
+                                                <label><span class="">Other</span></label>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Other_Yes__ID" name="Other" type="radio" value="Yes">
+                                                <label class="rd_btn" for="Other_Yes__ID">Yes</label>
+                                                <input id="Other_No__ID" name="Other" type="radio" value="No">
+                                                <label class="rd_btn" for="Other_No__ID">No</label>
+                                            </div>
+                                            <div id=Other_Onset__ID class="col-sm-12 col-md-5" style="display:none">
+                                                <label><span class="">Onset Time</span>
+                                                    <input class="form-control" type="time" name="Other_Onset_Time">
+                                                </label><br>
+                                                <label><span class="">Onset Date</span>
+                                                    <input class="form-control" type="date" name="Other_Onset_Date">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div id="other_comments__ID" style="display:xnone">
+                                            <div class="form-group">
+                                                <div class="questiongroup">
+                                                    <fieldset class="">
+                                                        <label style="width:100%"><span class="">Comments</span>
+                                                            <textarea name="symptoms_other"
+                                                                class="form-control"></textarea>
+                                                        </label>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   </fieldset>
+                                </div>
+                            </div>
+                            <h3>Participant expectations</h3>
+                            <div class="form-group">
+                                <h4>Which order of treatment did you think you received?</h4>
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-3">
+                                                <label><span class="">Treatment Session 1:</span></label>
+                                            </div>
+                                            <div class="col-sm-12 col-md-9">
+                                                <input id="Tx_Ts1_Dx__ID" name="Tx_Ts1"
+                                                    type="radio" value="ETC120">
+                                                <label class="rd_btn" for="Tx_Ts1_Dx__ID">‘ETC120’ 10mg THC and 200mg CBD</label>
+                                                <input id="Tx_Ts1_P__ID" name="Tx_Ts1"
+                                                    type="radio" value="Placebo">
+                                                <label class="rd_btn" for="Tx_Ts1_P__ID">Placebo</label>
+                                                <input id="Tx_Ts1_U__ID" name="Tx_Ts1"
+                                                    type="radio" value="Unsure">
+                                                <label class="rd_btn" for="Tx_Ts1_U__ID">Unsure</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-3">
+                                                <label><span class="">Treatment Session 2:</span></label>
+                                            </div>
+                                            <div class="col-sm-12 col-md-9">
+                                                <input id="Tx_Ts2_Dx__ID" name="Tx_Ts2"
+                                                    type="radio" value="ETC120">
+                                                <label class="rd_btn" for="Tx_Ts2_Dx__ID">‘ETC120’ 10mg THC and 200mg CBD</label>
+                                                <input id="Tx_Ts2_P__ID" name="Tx_Ts2"
+                                                    type="radio" value="Placebo">
+                                                <label class="rd_btn" for="Tx_Ts2_P__ID">Placebo</label>
+                                                <input id="Tx_Ts2_U__ID" name="Tx_Ts2"
+                                                    type="radio" value="Unsure">
+                                                <label class="rd_btn" for="Tx_Ts2_U__ID">Unsure</label>
+                                            </div>
+                                        </div>
                                     </fieldset>
                                 </div>
                             </div>
-
+                            <div class="form-group">
+                                <h4>How confident are you that your selection is correct?</h4>
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-1">
+                                                <label><span class=""></span></label>
+                                            </div>
+                                            <div class="col-sm-12 col-md-10">
+                                                <input id="Confident_Not__ID" name="Confident"
+                                                    type="radio" value="Not at all">
+                                                <label class="rd_btn" for="Confident_Not__ID">Not at all</label>
+                                                <input id="Confident_Somewhat__ID" name="Confident"
+                                                    type="radio"value="Somewhat">
+                                                <label class="rd_btn" for="Confident_Somewhat__ID">Somewhat</label>
+                                                <input id="Confident_Moderately__ID" name="Confident"
+                                                    type="radio"value="Moderately">
+                                                <label class="rd_btn" for="Confident_Moderately__ID">Moderately</label>
+                                                <input id="Confident_Extremely__ID" name="Confident"
+                                                    type="radio"value="Extremely">
+                                                <label class="rd_btn" for="Confident_Extremely__ID">Extremely</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="questiongroup">
+                                                <fieldset class="">
+                                                    <label style="width:100%"><span class="">Additional comments:</span>
+                                                        <textarea name="Additional_Comments"
+                                                            class="form-control"></textarea>
+                                                    </label>
+                                                </fieldset>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -79,13 +336,114 @@
             VmInclude: '__COMPONENT__/f/form.01.js'
             VmInclude: '__CURRENT_PATH__/shared-form.js'
             //------------------------------------
+            var load2 = m.load;
             m.load = function () {
                 load2();
                 if ($('[type="date"]').prop('type') != 'date') {
                     $('[type="date"]').datepicker();
                 }
+                $('#side_effects__ID').hide();
+                if($('#D__ID input[name=Neg_side_effects]:checked').val()=='Yes'){
+                    $('#side_effects__ID').show()
+                }
+                $('#Dizziness_Onset__ID').hide();
+                if($('#D__ID input[name=Dizziness]:checked').val()=='Yes'){
+                    $('#Dizziness_Onset__ID').show()
+                }
+                $('#Nausea_Onset__ID').hide();
+                if($('#D__ID input[name=Nausea]:checked').val()=='Yes'){
+                    $('#Nausea_Onset__ID').show()
+                }
+                $('#Fatigue_Onset__ID').hide();
+                if($('#D__ID input[name=Fatigue]:checked').val()=='Yes'){
+                    $('#Fatigue_Onset__ID').show()
+                }
+                $('#Dry_mouth_Onset__ID').hide();
+                if($('#D__ID input[name=Dry_mouth]:checked').val()=='Yes'){
+                    $('#Dry_mouth_Onset__ID').show()
+                }
+                $('#Drowsiness_Onset__ID').hide();
+                if($('#D__ID input[name=Drowsiness]:checked').val()=='Yes'){
+                    $('#Drowsiness_Onset__ID').show()
+                }
+                $('#Intoxicated_Onset__ID').hide();
+                if($('#D__ID input[name=Intoxicated]:checked').val()=='Yes'){
+                    $('#Intoxicated_Onset__ID').show()
+                }
+                $('#Disorientation_Onset__ID').hide();
+                if($('#D__ID input[name=Disorientation]:checked').val()=='Yes'){
+                    $('#Disorientation_Onset__ID').show()
+                }
+                $('#Lethargy_Onset__ID').hide();
+                if($('#D__ID input[name=Lethargy]:checked').val()=='Yes'){
+                    $('#Lethargy_Onset__ID').show()
+                }
+                $('#Other_Onset__ID').hide();
+                if($('#D__ID input[name=Other]:checked').val()=='Yes'){
+                    $('#Other_Onset__ID').show()
+                }
             }
-
+            //------------------------------------
+            $('#D__ID input[name=Neg_side_effects]').on('change',function(){
+                if($('#D__ID input[name=Neg_side_effects]:checked').val()=='Yes'){
+                    $('#side_effects__ID').show()
+                }
+                else $('#side_effects__ID').hide()
+            })
+            $('#D__ID input[name=Dizziness]').on('change',function(){
+                if($('#D__ID input[name=Dizziness]:checked').val()=='Yes'){
+                    $('#Dizziness_Onset__ID').show()
+                }
+                else $('#Dizziness_Onset__ID').hide()
+            })
+            $('#D__ID input[name=Nausea]').on('change',function(){
+                if($('#D__ID input[name=Nausea]:checked').val()=='Yes'){
+                    $('#Nausea_Onset__ID').show()
+                }
+                else $('#Nausea_Onset__ID').hide()
+            })
+            $('#D__ID input[name=Fatigue]').on('change',function(){
+                if($('#D__ID input[name=Fatigue]:checked').val()=='Yes'){
+                    $('#Fatigue_Onset__ID').show()
+                }
+                else $('#Fatigue_Onset__ID').hide()
+            })
+            $('#D__ID input[name=Dry_mouth]').on('change',function(){
+                if($('#D__ID input[name=Dry_mouth]:checked').val()=='Yes'){
+                    $('#Dry_mouth_Onset__ID').show()
+                }
+                else $('#Dry_mouth_Onset__ID').hide()
+            })
+            $('#D__ID input[name=Drowsiness]').on('change',function(){
+                if($('#D__ID input[name=Drowsiness]:checked').val()=='Yes'){
+                    $('#Drowsiness_Onset__ID').show()
+                }
+                else $('#Drowsiness_Onset__ID').hide()
+            })
+            $('#D__ID input[name=Intoxicated]').on('change',function(){
+                if($('#D__ID input[name=Intoxicated]:checked').val()=='Yes'){
+                    $('#Intoxicated_Onset__ID').show()
+                }
+                else $('#Intoxicated_Onset__ID').hide()
+            })
+            $('#D__ID input[name=Disorientation]').on('change',function(){
+                if($('#D__ID input[name=Disorientation]:checked').val()=='Yes'){
+                    $('#Disorientation_Onset__ID').show()
+                }
+                else $('#Disorientation_Onset__ID').hide()
+            })
+            $('#D__ID input[name=Lethargy]').on('change',function(){
+                if($('#D__ID input[name=Lethargy]:checked').val()=='Yes'){
+                    $('#Lethargy_Onset__ID').show()
+                }
+                else $('#Lethargy_Onset__ID').hide()
+            })
+            $('#D__ID input[name=Other]').on('change',function(){
+                if($('#D__ID input[name=Other]:checked').val()=='Yes'){
+                    $('#Other_Onset__ID').show()
+                }
+                else $('#Other_Onset__ID').hide()
+            })
         }
       //------------------------------------
     </script>
