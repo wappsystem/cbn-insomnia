@@ -10,7 +10,7 @@
                         <form id="F__ID">
                             <h3 id=title__ID></h3>
                             <!-- participant part for all tsak forms -------------------->
-                            <div id="participant_div__ID" >
+                            <div id="participant_div__ID">
                                 <div class="form-group">
                                     <fieldset class="subquestions">
                                         <label><span class="">Participant</span>
@@ -23,6 +23,50 @@
                                     </fieldset>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">During your visit, did you experience any negative
+                                                side-effects?</span>
+                                            <input id="Neg_side_effects_Yes__ID" name="Neg_side_effects" type="radio">
+                                            <label class="rd_btn" for="Neg_side_effects_Yes__ID">Yes</label>
+                                            <input id="Neg_side_effects_No__ID" name="Neg_side_effects" type="radio">
+                                            <label class="rd_btn" for="Neg_side_effects_No__ID">No</label>
+                                        </label>
+                                    </fieldset>
+                                </div>
+                                <div id="side_effects__ID" style="display:xnone">
+                                    <div class="form-group">
+                                        <div class="questiongroup">
+                                            <fieldset class="">
+                                                <label style="width:100%"><span class="">If yes, please describe:</span>
+                                                    <textarea name="neg_side_effects_details"
+                                                        class="form-control"></textarea>
+                                                </label>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4>Did you experience any of the following symptoms?</h4>
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Dizziness</span>
+                                            <input id="toggle-on" name="Dizziness" type="radio">
+                                            <label class="rd_btn" for="toggle-on">Yes</label>
+                                            <input id="toggle-off" name="Dizziness" type="radio">
+                                            <label class="rd_btn" for="toggle-off">No</label>
+                                            <label><span class="">Onset Time</span>
+                                                <input class="form-control" type="time" name="Onset_Time">
+                                            </label><br>
+                                            <label><span class="">Onset Date</span>
+                                                <input class="form-control" type="date" name="Onset_Date">
+                                            </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+
                         </form>
                     </div>
                 </div>
@@ -34,125 +78,36 @@
             //-------------------------------------
             VmInclude: '__COMPONENT__/f/form.01.js'
             VmInclude: '__CURRENT_PATH__/shared-form.js'
+            //------------------------------------
+            m.load = function () {
+                load2();
+                if ($('[type="date"]').prop('type') != 'date') {
+                    $('[type="date"]').datepicker();
+                }
+            }
 
         }
       //------------------------------------
     </script>
     <style>
-        #D__ID #indicator__ID {
-            margin-left: 91px;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 20px;
-            height: 5px;
-            background-color: red;
-            z-index: 200
+        #D__ID input[type="radio"] {
+            display: none;
         }
-#F__ID .vas {
-    position: relative;
-    height: 419px;
-    width: 200px;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    -ms-flex-direction: column;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    -ms-flex-align: stretch;
-    -webkit-box-align: stretch;
-    align-items: stretch;
-    -ms-flex-pack: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -ms-flex: 1;
-    -webkit-box-flex: 1;
-    flex: 1;
-    text-align: center;
-}
-#F__ID .vas__footer, .vas__header {
-    -ms-flex-positive: 0;
-    -webkit-box-flex: 0;
-    flex-grow: 0;
-    font-weight: 700;
-    max-width: 150px;
-    margin: 0 auto;
-}
-#F__ID .vas__body {
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    -ms-flex-direction: column;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    -ms-flex-align: stretch;
-    -webkit-box-align: stretch;
-    align-items: stretch;
-    -ms-flex-positive: 1;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    padding: 10px;
-    margin: 0 auto;
-}
-#F__ID .vas-tick {
-    position: relative;
-    text-align: center;
-    -ms-flex: 1;
-    -webkit-box-flex: 1;
-    flex: 1;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    -ms-flex-pack: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    -webkit-box-align: center;
-    align-items: center;
-    cursor: pointer;
-}
 
-#F__ID .vas-tick__value {
-    position: absolute;
-    top: 50%;
-    opacity: 0;
-    -webkit-transform: translateY(-50%) translateX(-40px);
-    transform: translateY(-50%) translateX(-40px);
-    visibility: hidden;
-}
-#F__ID .vas-tick--step .vas-tick__value {
-    opacity: 1;
-    visibility: visible;
-}
-#F__ID .vas-tick__line {
-    opacity: 1;
-    visibility: visible;
-    width: 10px;
-    height: 1px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-}
-#F__ID .vas-tick--step .vas-tick__line {
-    width: 28px;
-    height: 2px;
+        #D__ID .rd_btn {
+            padding: 10px 20px;
+            background-color: #ddd;
+            border: thin solid #b1b1b1;
+            border-radius: 10px;
+            margin: 5px;
+            display: inline-block;
+        }
 
-}
-#F__ID .vas-tick--step1 .vas-tick__line {
-    width: 15px;
-    height: 1px;
-}
-#yht__ID{
-        padding-top:0;
-    }
-@media (min-width: 1024x) {
-    #yht__ID{
-        padding-top:35px;
-    }
-}
-
+        #D__ID input[type="radio"]:checked+label {
+            background-color: #43884f;
+            cursor: default;
+            color: #E6E6E6;
+        }
 
         VmInclude:__CURRENT_PATH__/wappsystem-form.css
     </style>

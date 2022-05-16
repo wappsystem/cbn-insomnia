@@ -1155,10 +1155,10 @@
         data.POMS_ANG = (parseInt(data.POMS_2) + parseInt(data.POMS_11) + parseInt(data.POMS_20) + parseInt(data.POMS_22) + parseInt(data.POMS_26) + parseInt(data.POMS_33)).toString();
         data.POMS_FAT = (parseInt(data.POMS_3) + parseInt(data.POMS_18) + parseInt(data.POMS_27) + parseInt(data.POMS_30) + parseInt(data.POMS_39)).toString();
         data.POMS_DEP = (parseInt(data.POMS_4) + parseInt(data.POMS_8) + parseInt(data.POMS_14) + parseInt(data.POMS_21) + parseInt(data.POMS_24) + parseInt(data.POMS_29) + parseInt(data.POMS_35)).toString();
-        data.POMS_ERA = (parseInt(data.POMS_5) + parseInt(data.POMS_12) + parseInt(data.POMS_19) + parseInt(data.POMS_25) + parseInt(data.POMS_31) + parseInt(data.POMS_40)).toString();
+        data.POMS_EST = (parseInt(data.POMS_5) + parseInt(data.POMS_12) + parseInt(data.POMS_19) + parseInt(data.POMS_25) + parseInt(data.POMS_31) + parseInt(data.POMS_40)).toString();
         data.POMS_VIG = (parseInt(data.POMS_6) + parseInt(data.POMS_9) + parseInt(data.POMS_13) + parseInt(data.POMS_34) + parseInt(data.POMS_37)).toString();
         data.POMS_CON = (parseInt(data.POMS_7) + parseInt(data.POMS_17) + parseInt(data.POMS_32) + parseInt(data.POMS_36) + parseInt(data.POMS_38)).toString();
-        data.POMS_TMD = ((parseInt(data.POMS_TEN) + parseInt(data.POMS_DEP) + parseInt(data.POMS_ANG) + parseInt(data.POMS_FAT) + parseInt(data.POMS_CON))-(parseInt(data.POMS_VIG) + parseInt(data.POMS_ERA))).toString();
+        data.POMS_TMD = ((parseInt(data.POMS_TEN) + parseInt(data.POMS_DEP) + parseInt(data.POMS_ANG) + parseInt(data.POMS_FAT) + parseInt(data.POMS_CON))-(parseInt(data.POMS_VIG) + parseInt(data.POMS_EST))+100).toString();
         return before_submit(data, index);
       }
       //-------------------------------------

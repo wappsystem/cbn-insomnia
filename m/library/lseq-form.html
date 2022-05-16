@@ -38,7 +38,7 @@
                                     </div>
                                     <div class="col-sm-8 control-group">
                                         <div class="slidecontainer" id=LSEQ_1_con__ID>
-                                            <input type="range" min="0" max="100" class="slider" name="LSEQ_1"
+                                            <input type="range" min="0" max="10" step="0.1" class="slider" name="LSEQ_1"
                                                 id="LSEQ_1__ID">
                                         </div>
                                     </div>
@@ -54,7 +54,7 @@
                                     </div>
                                     <div class="col-sm-8 control-group">
                                         <div class="slidecontainer" id=LSEQ_2_con__ID>
-                                            <input type="range" min="0" max="100" class="slider" name="LSEQ_2"
+                                            <input type="range" min="0" max="10" step="0.1" class="slider" name="LSEQ_2"
                                                 id="LSEQ_2__ID">
                                         </div>
                                     </div>
@@ -70,7 +70,7 @@
                                     </div>
                                     <div class="col-sm-8 control-group">
                                         <div class="slidecontainer" id=LSEQ_3_con__ID>
-                                            <input type="range" min="0" max="100" class="slider" name="LSEQ_3"
+                                            <input type="range" min="0" max="10" step="0.1" class="slider" name="LSEQ_3"
                                                 id="LSEQ_3__ID">
                                         </div>
                                     </div>
@@ -93,7 +93,7 @@
                                     </div>
                                     <div class="col-sm-8 control-group">
                                         <div class="slidecontainer" id=LSEQ_4_con__ID>
-                                            <input type="range" min="0" max="100" class="slider" name="LSEQ_4"
+                                            <input type="range" min="0" max="10" step="0.1" class="slider" name="LSEQ_4"
                                                 id="LSEQ_4__ID">
                                         </div>
                                     </div>
@@ -109,7 +109,7 @@
                                     </div>
                                     <div class="col-sm-8 control-group">
                                         <div class="slidecontainer" id=LSEQ_5_con__ID>
-                                            <input type="range" min="0" max="100" class="slider" name="LSEQ_5"
+                                            <input type="range" min="0" max="10" step="0.1" class="slider" name="LSEQ_5"
                                                 id="LSEQ_5__ID">
                                         </div>
                                     </div>
@@ -132,7 +132,7 @@
                                     </div>
                                     <div class="col-sm-8 control-group">
                                         <div class="slidecontainer" id=LSEQ_6_con__ID>
-                                            <input type="range" min="0" max="100" class="slider" name="LSEQ_6"
+                                            <input type="range" min="0" max="10" step="0.1" class="slider" name="LSEQ_6"
                                                 id="LSEQ_6__ID">
                                         </div>
                                     </div>
@@ -148,7 +148,7 @@
                                     </div>
                                     <div class="col-sm-8 control-group">
                                         <div class="slidecontainer" id=LSEQ_7_con__ID>
-                                            <input type="range" min="0" max="100" class="slider" name="LSEQ_7"
+                                            <input type="range" min="0" max="10" step="0.1" class="slider" name="LSEQ_7"
                                                 id="LSEQ_7__ID">
                                         </div>
                                     </div>
@@ -171,7 +171,7 @@
                                     </div>
                                     <div class="col-sm-8 control-group">
                                         <div class="slidecontainer" id=LSEQ_8_con__ID>
-                                            <input type="range" min="0" max="100" class="slider" name="LSEQ_8"
+                                            <input type="range" min="0" max="10" step="0.1" class="slider" name="LSEQ_8"
                                                 id="LSEQ_8__ID">
                                         </div>
                                     </div>
@@ -194,7 +194,7 @@
                                     </div>
                                     <div class="col-sm-8 control-group">
                                         <div class="slidecontainer" id=LSEQ_9_con__ID>
-                                            <input type="range" min="0" max="100" class="slider" name="LSEQ_9"
+                                            <input type="range" min="0" max="10" step="0.1" class="slider" name="LSEQ_9"
                                                 id="LSEQ_9__ID">
                                         </div>
                                     </div>
@@ -217,7 +217,7 @@
                                     </div>
                                     <div class="col-sm-8 control-group">
                                         <div class="slidecontainer" id=LSEQ_10_con__ID>
-                                            <input type="range" min="0" max="100" class="slider" name="LSEQ_10"
+                                            <input type="range" min="0" max="10" step="0.1" class="slider" name="LSEQ_10"
                                                 id="LSEQ_10__ID">
                                         </div>
                                     </div>
@@ -321,6 +321,17 @@
                 $('<style>#LSEQ_10_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
                 $('#LSEQ_10_req__ID').val("OK")
             })
+            var before_submit=m.before_submit;
+                m.before_submit=function(data,index){
+                    data.LSEQ_GTS=((parseFloat(data.LSEQ_1)+parseFloat(data.LSEQ_2)+parseFloat(data.LSEQ_3))/30).toFixed(2);
+                    data.LSEQ_QOS=((parseFloat(data.LSEQ_4)+parseFloat(data.LSEQ_5))/20).toFixed(2);
+                    data.LSEQ_AFS=((parseFloat(data.LSEQ_6)+parseFloat(data.LSEQ_7))/20).toFixed(2);
+                    //data.LSEQ_BFW=((parseFloat(data.LSEQ_8)+parseFloat(data.LSEQ_9))/20).toFixed(1);
+                    data.LSEQ_BFW=((parseFloat(data.LSEQ_8)+parseFloat(data.LSEQ_9)+parseFloat(data.LSEQ_10))/30).toFixed(2);
+                return before_submit(data,index); 
+            }
+            //-------------------------------------
+
         }
     </script>
     <style>
