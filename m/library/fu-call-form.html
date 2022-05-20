@@ -10,7 +10,7 @@
                         <form id="F__ID">
                             <h3 id=title__ID></h3>
                             <!-- participant part for all tsak forms -------------------->
-                            <div id="participant_div__ID" >
+                            <div id="participant_div__ID">
                                 <div class="form-group">
                                     <fieldset class="subquestions">
                                         <label><span class="">Participant</span>
@@ -23,6 +23,77 @@
                                     </fieldset>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <h4>POST-DISCHARGE SYMPTOMS</h4>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-6">
+                                                <label><span class="">Since your visit, did you experience any negative side-effects? </span></label>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Neg_side_effects_Yes__ID" name="Neg_side_effects"
+                                                    type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="Neg_side_effects_Yes__ID">Yes</label>
+                                                <input id="Neg_side_effects_No__ID" name="Neg_side_effects"
+                                                    type="radio" value="No">
+                                                <label class="rd_btn" for="Neg_side_effects_No__ID">No</label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div id="side_effects__ID" style="display:none">
+                                    <div class="form-group">
+                                        <div class="questiongroup">
+                                            <fieldset class="">
+                                                <label style="width:100%"><span class="">If yes, please describe:</span>
+                                                    <textarea name="neg_side_effects_details" id="neg_side_effects_details__ID"
+                                                        class="form-control"></textarea>
+                                                </label>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <h4>Please fill in AE in appropriate form </h4>
+                                    </div>    
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-6">
+                                                <label><span class="">Since your visit, have you noticed any changes in your sleep? </span></label>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="sleep_change_Yes__ID" name="sleep_change"
+                                                    type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="sleep_change_Yes__ID">Yes</label>
+                                                <input id="sleep_change_No__ID" name="sleep_change"
+                                                    type="radio" value="No">
+                                                <label class="rd_btn" for="sleep_change_No__ID">No</label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div id="sleep__ID" style="display:none">
+                                    <div class="form-group">
+                                        <div class="questiongroup">
+                                            <fieldset class="">
+                                                <label style="width:100%"><span class="">If yes, please describe:</span>
+                                                    <textarea name="sleep_change_details" id="sleep_change_details__ID"
+                                                        class="form-control"></textarea>
+                                                </label>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -34,125 +105,282 @@
             //-------------------------------------
             VmInclude: '__COMPONENT__/f/form.01.js'
             VmInclude: '__CURRENT_PATH__/shared-form.js'
-
+            //------------------------------------
+            var load2 = m.load;
+            m.load = function () {
+                load2();
+                if ($('[type="date"]').prop('type') != 'date') {
+                    $('[type="date"]').datepicker();
+                }
+                //--------------
+                if($('#D__ID input[name=Neg_side_effects]:checked').val()=='Yes'){
+                    $('#side_effects__ID').show()
+                    $('#neg_side_effects_details__ID').prop('required',true);
+                }
+                else {
+                    $('#side_effects__ID').hide();
+                    $('#neg_side_effects_details__ID').prop('required',false);
+                }
+                //--------------
+                if($('#D__ID input[name=sleep_change]:checked').val()=='Yes'){
+                    $('#sleep__ID').show()
+                    $('#sleep_change_details__ID').prop('required',true);
+                }
+                else {
+                    $('#sleep__ID').hide();
+                    $('#sleep_change_details__ID').prop('required',false);
+                }
+                //--------------
+                if($('#D__ID input[name=Dizziness]:checked').val()=='Yes'){
+                    $('#Dizziness_Onset__ID').show()
+                    $('#Dizziness_Onset_Time__ID').prop('required',true);
+                    $('#Dizziness_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Dizziness_Onset__ID').hide()
+                    $('#Dizziness_Onset_Time__ID').prop('required',false);
+                    $('#Dizziness_Onset_Date__ID').prop('required',false);
+                }
+                //--------------
+                if($('#D__ID input[name=Nausea]:checked').val()=='Yes'){
+                    $('#Nausea_Onset__ID').show()
+                    $('#Nausea_Onset_Time__ID').prop('required',true);
+                    $('#Nausea_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Nausea_Onset__ID').hide()
+                    $('#Nausea_Onset_Time__ID').prop('required',false);
+                    $('#Nausea_Onset_Date__ID').prop('required',false);
+                }
+                //--------------
+                if($('#D__ID input[name=Fatigue]:checked').val()=='Yes'){
+                    $('#Fatigue_Onset__ID').show()
+                    $('#Fatigue_Onset_Time__ID').prop('required',true);
+                    $('#Fatigue_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Fatigue_Onset__ID').hide()
+                    $('#Fatigue_Onset_Time__ID').prop('required',false);
+                    $('#Fatigue_Onset_Date__ID').prop('required',false);
+                }
+                //--------------
+                if($('#D__ID input[name=Dry_mouth]:checked').val()=='Yes'){
+                    $('#Dry_mouth_Onset__ID').show()
+                    $('#Dry_mouth_Onset_Time__ID').prop('required',true);
+                    $('#Dry_mouth_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Dry_mouth_Onset__ID').hide()
+                    $('#Dry_mouth_Onset_Time__ID').prop('required',false);
+                    $('#Dry_mouth_Onset_Date__ID').prop('required',false);
+                }
+                //--------------
+                if($('#D__ID input[name=Drowsiness]:checked').val()=='Yes'){
+                    $('#Drowsiness_Onset__ID').show()
+                    $('#Drowsiness_Onset_Time__ID').prop('required',true);
+                    $('#Drowsiness_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Drowsiness_Onset__ID').hide()
+                    $('#Drowsiness_Onset_Time__ID').prop('required',false);
+                    $('#Drowsiness_Onset_Date__ID').prop('required',false);
+                }
+                //--------------
+                if($('#D__ID input[name=Intoxicated]:checked').val()=='Yes'){
+                    $('#Intoxicated_Onset__ID').show()
+                    $('#Intoxicated_Onset_Time__ID').prop('required',true);
+                    $('#Intoxicated_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Intoxicated_Onset__ID').hide()
+                    $('#Intoxicated_Onset_Time__ID').prop('required',false);
+                    $('#Intoxicated_Onset_Date__ID').prop('required',false);
+                }
+                //--------------
+                if($('#D__ID input[name=Disorientation]:checked').val()=='Yes'){
+                    $('#Disorientation_Onset__ID').show()
+                    $('#Disorientation_Onset_Time__ID').prop('required',true);
+                    $('#Disorientation_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Disorientation_Onset__ID').hide()
+                    $('#Disorientation_Onset_Time__ID').prop('required',false);
+                    $('#Disorientation_Onset_Date__ID').prop('required',false);
+                }
+                //--------------
+                if($('#D__ID input[name=Lethargy]:checked').val()=='Yes'){
+                    $('#Lethargy_Onset__ID').show()
+                    $('#Lethargy_Onset_Time__ID').prop('required',true);
+                    $('#Lethargy_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Lethargy_Onset__ID').hide()
+                    $('#Lethargy_Onset_Time__ID').prop('required',false);
+                    $('#Lethargy_Onset_Date__ID').prop('required',false);
+                }
+                //--------------
+                if($('#D__ID input[name=Other]:checked').val()=='Yes'){
+                    $('#Other_Onset__ID').show()
+                    $('#Other_Onset_Time__ID').prop('required',true);
+                    $('#Other_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Other_Onset__ID').hide()
+                    $('#Other_Onset_Time__ID').prop('required',false);
+                    $('#Other_Onset_Date__ID').prop('required',false);
+                }
+            }
+            //------------------------------------
+            $('#D__ID input[name=Neg_side_effects]').on('change',function(){
+                if($('#D__ID input[name=Neg_side_effects]:checked').val()=='Yes'){
+                    $('#side_effects__ID').show()
+                    $('#neg_side_effects_details__ID').prop('required',true);
+                }
+                else {
+                    $('#side_effects__ID').hide();
+                    $('#neg_side_effects_details__ID').prop('required',false);
+                }
+            })
+            $('#D__ID input[name=sleep_change]').on('change',function(){
+                if($('#D__ID input[name=sleep_change]:checked').val()=='Yes'){
+                    $('#sleep__ID').show()
+                    $('#sleep_change_details__ID').prop('required',true);
+                }
+                else {
+                    $('#sleep__ID').hide();
+                    $('#sleep_change_details__ID').prop('required',false);
+                }
+            })
+            $('#D__ID input[name=Dizziness]').on('change',function(){
+                if($('#D__ID input[name=Dizziness]:checked').val()=='Yes'){
+                    $('#Dizziness_Onset__ID').show()
+                    $('#Dizziness_Onset_Time__ID').prop('required',true);
+                    $('#Dizziness_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Dizziness_Onset__ID').hide()
+                    $('#Dizziness_Onset_Time__ID').prop('required',false);
+                    $('#Dizziness_Onset_Date__ID').prop('required',false);
+                }
+            })
+            $('#D__ID input[name=Nausea]').on('change',function(){
+                if($('#D__ID input[name=Nausea]:checked').val()=='Yes'){
+                    $('#Nausea_Onset__ID').show()
+                    $('#Nausea_Onset_Time__ID').prop('required',true);
+                    $('#Nausea_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Nausea_Onset__ID').hide()
+                    $('#Nausea_Onset_Time__ID').prop('required',false);
+                    $('#Nausea_Onset_Date__ID').prop('required',false);
+                }
+            })
+            $('#D__ID input[name=Fatigue]').on('change',function(){
+                if($('#D__ID input[name=Fatigue]:checked').val()=='Yes'){
+                    $('#Fatigue_Onset__ID').show()
+                    $('#Fatigue_Onset_Time__ID').prop('required',true);
+                    $('#Fatigue_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Fatigue_Onset__ID').hide()
+                    $('#Fatigue_Onset_Time__ID').prop('required',false);
+                    $('#Fatigue_Onset_Date__ID').prop('required',false);
+                }
+            })
+            $('#D__ID input[name=Dry_mouth]').on('change',function(){
+                if($('#D__ID input[name=Dry_mouth]:checked').val()=='Yes'){
+                    $('#Dry_mouth_Onset__ID').show()
+                    $('#Dry_mouth_Onset_Time__ID').prop('required',true);
+                    $('#Dry_mouth_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Dry_mouth_Onset__ID').hide()
+                    $('#Dry_mouth_Onset_Time__ID').prop('required',false);
+                    $('#Dry_mouth_Onset_Date__ID').prop('required',false);
+                }
+            })
+            $('#D__ID input[name=Drowsiness]').on('change',function(){
+                if($('#D__ID input[name=Drowsiness]:checked').val()=='Yes'){
+                    $('#Drowsiness_Onset__ID').show()
+                    $('#Drowsiness_Onset_Time__ID').prop('required',true);
+                    $('#Drowsiness_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Drowsiness_Onset__ID').hide()
+                    $('#Drowsiness_Onset_Time__ID').prop('required',false);
+                    $('#Drowsiness_Onset_Date__ID').prop('required',false);
+                }
+            })
+            $('#D__ID input[name=Intoxicated]').on('change',function(){
+                if($('#D__ID input[name=Intoxicated]:checked').val()=='Yes'){
+                    $('#Intoxicated_Onset__ID').show()
+                    $('#Intoxicated_Onset_Time__ID').prop('required',true);
+                    $('#Intoxicated_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Intoxicated_Onset__ID').hide()
+                    $('#Intoxicated_Onset_Time__ID').prop('required',false);
+                    $('#Intoxicated_Onset_Date__ID').prop('required',false);
+                }
+            })
+            $('#D__ID input[name=Disorientation]').on('change',function(){
+                if($('#D__ID input[name=Disorientation]:checked').val()=='Yes'){
+                    $('#Disorientation_Onset__ID').show()
+                    $('#Disorientation_Onset_Time__ID').prop('required',true);
+                    $('#Disorientation_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Disorientation_Onset__ID').hide()
+                    $('#Disorientation_Onset_Time__ID').prop('required',false);
+                    $('#Disorientation_Onset_Date__ID').prop('required',false);
+                }
+            })
+            $('#D__ID input[name=Lethargy]').on('change',function(){
+                if($('#D__ID input[name=Lethargy]:checked').val()=='Yes'){
+                    $('#Lethargy_Onset__ID').show()
+                    $('#Lethargy_Onset_Time__ID').prop('required',true);
+                    $('#Lethargy_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Lethargy_Onset__ID').hide()
+                    $('#Lethargy_Onset_Time__ID').prop('required',false);
+                    $('#Lethargy_Onset_Date__ID').prop('required',false);
+                }
+            })
+            $('#D__ID input[name=Other]').on('change',function(){
+                if($('#D__ID input[name=Other]:checked').val()=='Yes'){
+                    $('#Other_Onset__ID').show()
+                    $('#Other_Onset_Time__ID').prop('required',true);
+                    $('#Other_Onset_Date__ID').prop('required',true);
+                }
+                else {
+                    $('#Other_Onset__ID').hide()
+                    $('#Other_Onset_Time__ID').prop('required',false);
+                    $('#Other_Onset_Date__ID').prop('required',false);
+                }
+            })
         }
       //------------------------------------
     </script>
     <style>
-        #D__ID #indicator__ID {
-            margin-left: 91px;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 20px;
-            height: 5px;
-            background-color: red;
-            z-index: 200
+        #D__ID input[type="radio"] {
+            opacity: 0;
         }
-#F__ID .vas {
-    position: relative;
-    height: 419px;
-    width: 200px;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    -ms-flex-direction: column;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    -ms-flex-align: stretch;
-    -webkit-box-align: stretch;
-    align-items: stretch;
-    -ms-flex-pack: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -ms-flex: 1;
-    -webkit-box-flex: 1;
-    flex: 1;
-    text-align: center;
-}
-#F__ID .vas__footer, .vas__header {
-    -ms-flex-positive: 0;
-    -webkit-box-flex: 0;
-    flex-grow: 0;
-    font-weight: 700;
-    max-width: 150px;
-    margin: 0 auto;
-}
-#F__ID .vas__body {
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    -ms-flex-direction: column;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    -ms-flex-align: stretch;
-    -webkit-box-align: stretch;
-    align-items: stretch;
-    -ms-flex-positive: 1;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    padding: 10px;
-    margin: 0 auto;
-}
-#F__ID .vas-tick {
-    position: relative;
-    text-align: center;
-    -ms-flex: 1;
-    -webkit-box-flex: 1;
-    flex: 1;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    -ms-flex-pack: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    -webkit-box-align: center;
-    align-items: center;
-    cursor: pointer;
-}
 
-#F__ID .vas-tick__value {
-    position: absolute;
-    top: 50%;
-    opacity: 0;
-    -webkit-transform: translateY(-50%) translateX(-40px);
-    transform: translateY(-50%) translateX(-40px);
-    visibility: hidden;
-}
-#F__ID .vas-tick--step .vas-tick__value {
-    opacity: 1;
-    visibility: visible;
-}
-#F__ID .vas-tick__line {
-    opacity: 1;
-    visibility: visible;
-    width: 10px;
-    height: 1px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-}
-#F__ID .vas-tick--step .vas-tick__line {
-    width: 28px;
-    height: 2px;
+        #D__ID .rd_btn {
+            padding: 10px 20px;
+            background-color: #ddd;
+            border: thin solid #b1b1b1;
+            border-radius: 10px;
+            margin: 5px;
+            display: inline-block;
+        }
 
-}
-#F__ID .vas-tick--step1 .vas-tick__line {
-    width: 15px;
-    height: 1px;
-}
-#yht__ID{
-        padding-top:0;
-    }
-@media (min-width: 1024x) {
-    #yht__ID{
-        padding-top:35px;
-    }
-}
-
+        #D__ID input[type="radio"]:checked+label {
+            background-color: #43884f;
+            cursor: default;
+            color: #E6E6E6;
+        }
 
         VmInclude:__CURRENT_PATH__/wappsystem-form.css
     </style>
