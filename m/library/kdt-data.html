@@ -1,19 +1,24 @@
 <section>
-  VmInclude:__CURRENT_PATH__/grid.v1h.html
+    VmInclude:__CURRENT_PATH__/grid.v1h.html
 </section>
 <script>
-  function F__ID(){
-      //-------------------------------------
-      VmInclude:__COMPONENT__/g/grid.01.js
-      VmInclude:__CURRENT_PATH__/shared-data.js
-      //-------------------------------------
-      $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
-      //-------------------------------------
-      var fields="";
-      m.fields="_Form,_Status,_Notes,_Participant_ID,Participant,"+fields+",Submit_date,Submitted_by,_Delete";
-      //-------------------------------------
-  }
+    function F__ID() {
+        //-------------------------------------
+        VmInclude: __COMPONENT__/g/grid.01.js
+        VmInclude: __CURRENT_PATH__/shared-data.js
+        //-------------------------------------
+        $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
+        //-------------------------------------
+        var dyn_fields = "Visit,Timepoint,KDT_Test_No_EDF_File_Name,EO1_ScE_i,EC_ScE_i,EO2_ScE_i,All_ScE_i,Ave_EOs_ScE_i,EO1_Delta_i,EO1_Theta_i,EO1_Alpha_i,EO1_Sigma_i,EO1_Beta_i,EC_Delta_i,EC_Theta_i,EC_Alpha_i,EC_Sigma_i,EC_Beta_i,EO2_Delta_i,EO2_Theta_i,EO2_Alpha_i,EO2_Sigma_i,EO2_Beta_i,All_Delta_i,All_Theta_i,All_Alpha_i,All_Sigma_i,All_Beta_i,Ave_EOs_Delta_i,Ave_EOs_Theta_i,Ave_EOs_Alpha_i,Ave_EOs_Sigma_i,Ave_EOs_Beta_i";
+        m.fields = "_Form,Status|S3,Notes|NT,Participant_ID|Participant_uid,Participant," + dyn_fields + ",Submit_date,Submitted_by,_Delete";
+        m.fields_e = "Participant_uid,Visit,Timepoint,KDT_Test_No_EDF_File_Name,EO1_ScE_i,EC_ScE_i,EO2_ScE_i,All_ScE_i,Ave_EOs_ScE_i,EO1_Delta_i,EO1_Theta_i,EO1_Alpha_i,EO1_Sigma_i,EO1_Beta_i,EC_Delta_i,EC_Theta_i,EC_Alpha_i,EC_Sigma_i,EC_Beta_i,EO2_Delta_i,EO2_Theta_i,EO2_Alpha_i,EO2_Sigma_i,EO2_Beta_i,All_Delta_i,All_Theta_i,All_Alpha_i,All_Sigma_i,All_Beta_i,Ave_EOs_Delta_i,Ave_EOs_Theta_i,Ave_EOs_Alpha_i,Ave_EOs_Sigma_i,Ave_EOs_Beta_i";
+        //-------------------------------------
+        m.load=function(){
+        $vm.dyn_fields=dyn_fields;
+      }
+
+    }
 </script>
 <style>
-  VmInclude:__COMPONENT__/g/grid.01.css
+    VmInclude:__COMPONENT__/g/grid.01.css
 </style>
