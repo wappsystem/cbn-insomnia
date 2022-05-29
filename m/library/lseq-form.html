@@ -256,6 +256,16 @@
                     $('<style>#LSEQ_8_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
                     $('<style>#LSEQ_9_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
                     $('<style>#LSEQ_10_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
+                    $('#LSEQ_1_req__ID').val("OK");
+                    $('#LSEQ_2_req__ID').val("OK");
+                    $('#LSEQ_3_req__ID').val("OK");
+                    $('#LSEQ_4_req__ID').val("OK");
+                    $('#LSEQ_5_req__ID').val("OK");
+                    $('#LSEQ_6_req__ID').val("OK");
+                    $('#LSEQ_7_req__ID').val("OK");
+                    $('#LSEQ_8_req__ID').val("OK");
+                    $('#LSEQ_9_req__ID').val("OK");
+                    $('#LSEQ_10_req__ID').val("OK");
                 }
                 else{
                     $('<style>#LSEQ_1_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0px; height: 0px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
@@ -326,8 +336,8 @@
                     data.LSEQ_GTS=((parseFloat(data.LSEQ_1)+parseFloat(data.LSEQ_2)+parseFloat(data.LSEQ_3))/30).toFixed(2);
                     data.LSEQ_QOS=((parseFloat(data.LSEQ_4)+parseFloat(data.LSEQ_5))/20).toFixed(2);
                     data.LSEQ_AFS=((parseFloat(data.LSEQ_6)+parseFloat(data.LSEQ_7))/20).toFixed(2);
-                    //data.LSEQ_BFW=((parseFloat(data.LSEQ_8)+parseFloat(data.LSEQ_9))/20).toFixed(1);
                     data.LSEQ_BFW=((parseFloat(data.LSEQ_8)+parseFloat(data.LSEQ_9)+parseFloat(data.LSEQ_10))/30).toFixed(2);
+                    data.LSEQ=((parseFloat(data.LSEQ_1)+parseFloat(data.LSEQ_2)+parseFloat(data.LSEQ_3)+parseFloat(data.LSEQ_4)+parseFloat(data.LSEQ_5)+parseFloat(data.LSEQ_6)+parseFloat(data.LSEQ_7)+parseFloat(data.LSEQ_8)+parseFloat(data.LSEQ_9)+parseFloat(data.LSEQ_10))/100).toFixed(2);
                 return before_submit(data,index); 
             }
             //-------------------------------------
