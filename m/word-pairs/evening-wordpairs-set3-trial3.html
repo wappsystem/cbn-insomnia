@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css" />
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.2.1.min.js"></script>
+        <script>$vm={};$VmAPI={};$vm.ver=[0.53,0.53];$vm.reload='';</script>
+        <script src="https://vm.vmiis.com/distribution/vm.js"></script>
+    </head>
+    <body>
+        <div style="padding:6px">
+            <button type=button id=start__ID class='btn btn-secondary'>Start</button> <button id=pause__ID class='btn btn-secondary'>Pause</button> <button type=button id=stop__ID class='btn btn-secondary'>Stop</button>
+        </div>
+        <div>
+            <div style='margin-left:auto;margin-right:auto;width:960px;height:720px;' >
+                <img id=img__ID >
+            <div>
+        </div>
+    </body>
+    <script>
+            document.title="Word Pairs";
+
+            var pause_array=[
+            {src:'__CURRENT_PATH__/../images/Set3/Blank.JPG',time:1000},
+        ]
+        var img_array=[
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide1.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide2.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide3.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide4.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide5.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide6.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide7.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide8.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide9.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide10.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide11.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide12.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide13.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide14.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide15.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide16.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide17.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide18.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide19.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide20.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide21.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide22.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide23.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide24.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide25.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide26.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide27.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide28.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide29.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide30.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide31.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Pres/Slide32.jpeg',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Blank.JPG',time:5000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide34.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide35.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide36.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide37.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide38.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide39.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide40.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide41.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide42.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide43.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide44.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide45.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide46.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide47.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide48.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide49.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide50.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide51.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide52.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide53.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide54.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide55.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide56.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide57.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide58.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide59.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide60.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide61.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide62.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide63.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide64.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Recall/Slide65.jpeg',time:12000},
+            {src:'__CURRENT_PATH__/../images/Set3/Blank.JPG',time:5000},
+
+        ]
+        //----------------------------------
+        var random_array=function(array){
+            var currentIndex=array.length, temporaryValue, randomIndex;
+            while (0 !== currentIndex) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+            return array;
+        }
+        //----------------------------------
+        var group1=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
+        var group1_random=random_array(group1);
+		var group2=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
+        var group2_random=random_array(group2);
+        //----------------------------------
+		var all=[];
+		for(i=0;i<32;i++){
+			all.push(0+group1[i])
+		}
+		all.push(32)
+		for(i=0;i<32;i++){
+			all.push(33+group2[i])
+		}
+		//all.push(65)
+		console.dir(all)
+		//----------------------------------
+        var I=-1;
+        var N=img_array.length;
+            var pause=false;
+        $('#D__ID').on('load',function(){
+            I=-1;
+        })
+        $('#start__ID').on('click',function(){
+            if(I<0){
+                I=0;
+                set_img();
+            }
+            else{
+                I=0
+            }
+        })
+        $('#pause__ID').on('click',function(){
+            if (pause==false) {
+                $("#pause__ID").html('Continue');
+                pause=true;
+            }
+            else {
+                $("#pause__ID").html('Pause');
+                pause=false;
+            }
+        })
+        $('#stop__ID').on('click',function(){
+            I=-1;
+        })
+        var set_img=function(){
+            if(I>=0 && I<=64){
+                if(pause==false){
+					var r_I=all[I];
+					console.log(I+'---'+r_I);
+	                $("#img__ID").attr("src",img_array[r_I].src);
+					setTimeout(set_img, img_array[r_I].time);
+	                I++;
+            	}
+            }
+			else{
+				$("#img__ID").attr("src",pause_array[0].src);
+			}
+        }
+	
+    </script>
+</html>
