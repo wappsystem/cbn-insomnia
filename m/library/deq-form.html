@@ -25,9 +25,12 @@
                             </div>
                             <!-- form group -->
                             <div class="form-group">
+                                <h5 style="font-size:1rem;">This questionnaire asks about how you are feeling after taking the substance that was given to you. Please place the mark on the line to show how strongly you are feeling each of the following effects <b>right now</b>.<br>You can mark anywhere on the line.</h5>
+                              </div>                
+                            <div class="form-group">
                                 <div class="row">
                                     <div class="col-sm control-group text-left">
-                                        <label><span>1. Feeling stoned or ‘high’</span></label>
+                                        <label><span>1. Do you <u>FEEL</u> a drug effect right now?</span></label>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -54,7 +57,7 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-sm control-group text-left">
-                                        <label><span>2. Feeling sedated</span></label>
+                                        <label><span>2. Are you feeling stoned or ‘<u>HIGH</u>’ right now?</span></label>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -81,7 +84,7 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-sm control-group text-left">
-                                        <label><span>3. Feeling alert</span></label>
+                                        <label><span>3. Do you <u>LIKE</u> any of the effects you are feeling right now?</span></label>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -108,7 +111,7 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-sm control-group text-left">
-                                        <label><span>4. Feeling anxious</span></label>
+                                        <label><span>4. Do you <u>DISLIKE</u> any of the effects you are feeling right now?</span></label>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -135,7 +138,7 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-sm control-group text-left">
-                                        <label><span>5. Feeling sleepy</span></label>
+                                        <label><span>5. Would you like <u>MORE</u> of the drug you took, right now?</span></label>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -152,6 +155,87 @@
                                                 <div class="col" style="text-align: right;"><label><span>Extremely<br>&#8595;</span></label></div>
                                             </div>    
                                             <input type="range" min="0" max="100" class="slider" name="DEQ_MORE" id="DEQ_5__ID">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 control-group text-right">
+                                        <label><span></span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm control-group text-left">
+                                        <label><span>6. Do you feel <u>sedated</u> right now?</span></label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2 control-group text-left">
+                                        <label><span></span></label><input type="text" id="DEQ_6_req__ID"
+                                            required
+                                            style="width:1px;height:1px;background:rgba(255,255,255,0.95);border:0">
+                                    </div>
+                                    <div class="col-sm-8 control-group">
+                                        <div class="slidecontainer" id=DEQ_6_con__ID>
+                                            <div class="row">
+                                                <div class="col" style="text-align: left;"><label><span>Not At All<br>&#8595;</span></label></div>
+                                                <div class="col" style="text-align: center;"><label><span>Moderately<br>&#8595;</span></label></div>
+                                                <div class="col" style="text-align: right;"><label><span>Extremely<br>&#8595;</span></label></div>
+                                            </div>    
+                                            <input type="range" min="0" max="100" class="slider" name="DEQ_SEDATED" id="DEQ_6__ID">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 control-group text-right">
+                                        <label><span></span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm control-group text-left">
+                                        <label><span>7. Do you feel <u>anxious</u> right now?</span></label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2 control-group text-left">
+                                        <label><span></span></label><input type="text" id="DEQ_7_req__ID"
+                                            required
+                                            style="width:1px;height:1px;background:rgba(255,255,255,0.95);border:0">
+                                    </div>
+                                    <div class="col-sm-8 control-group">
+                                        <div class="slidecontainer" id=DEQ_7_con__ID>
+                                            <div class="row">
+                                                <div class="col" style="text-align: left;"><label><span>Not At All<br>&#8595;</span></label></div>
+                                                <div class="col" style="text-align: center;"><label><span>Moderately<br>&#8595;</span></label></div>
+                                                <div class="col" style="text-align: right;"><label><span>Extremely<br>&#8595;</span></label></div>
+                                            </div>    
+                                            <input type="range" min="0" max="100" class="slider" name="DEQ_ANXIOUS" id="DEQ_7__ID">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 control-group text-right">
+                                        <label><span></span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm control-group text-left">
+                                        <label><span>8. Do you feel <u>sleepy</u> right now?</span></label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-2 control-group text-left">
+                                        <label><span></span></label><input type="text" id="DEQ_8_req__ID"
+                                            required
+                                            style="width:1px;height:1px;background:rgba(255,255,255,0.95);border:0">
+                                    </div>
+                                    <div class="col-sm-8 control-group">
+                                        <div class="slidecontainer" id=DEQ_8_con__ID>
+                                            <div class="row">
+                                                <div class="col" style="text-align: left;"><label><span>Not At All<br>&#8595;</span></label></div>
+                                                <div class="col" style="text-align: center;"><label><span>Moderately<br>&#8595;</span></label></div>
+                                                <div class="col" style="text-align: right;"><label><span>Extremely<br>&#8595;</span></label></div>
+                                            </div>    
+                                            <input type="range" min="0" max="100" class="slider" name="DEQ_SLEEPY" id="DEQ_8__ID">
                                         </div>
                                     </div>
                                     <div class="col-sm-2 control-group text-right">
@@ -182,6 +266,9 @@
                     $('<style>#DEQ_3_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
                     $('<style>#DEQ_4_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
                     $('<style>#DEQ_5_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
+                    $('<style>#DEQ_6_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
+                    $('<style>#DEQ_7_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
+                    $('<style>#DEQ_8_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
                 }
                 else{
                     $('<style>#DEQ_1_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0px; height: 0px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
@@ -189,6 +276,9 @@
                     $('<style>#DEQ_3_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0px; height: 0px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
                     $('<style>#DEQ_4_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0px; height: 0px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
                     $('<style>#DEQ_5_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0px; height: 0px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
+                    $('<style>#DEQ_6_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0px; height: 0px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
+                    $('<style>#DEQ_7_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0px; height: 0px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
+                    $('<style>#DEQ_8_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0px; height: 0px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
                 }
                 $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
             }
@@ -216,6 +306,21 @@
             $('#DEQ_5__ID').on('click', function () {
                 $('<style>#DEQ_5_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
                 $('#DEQ_5_req__ID').val("OK")
+            })
+            //-------------------------------
+            $('#DEQ_6__ID').on('click', function () {
+                $('<style>#DEQ_6_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                $('#DEQ_6_req__ID').val("OK")
+            })
+            //-------------------------------
+            $('#DEQ_7__ID').on('click', function () {
+                $('<style>#DEQ_7_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                $('#DEQ_7_req__ID').val("OK")
+            })
+            //-------------------------------
+            $('#DEQ_8__ID').on('click', function () {
+                $('<style>#DEQ_8_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                $('#DEQ_8_req__ID').val("OK")
             })
             //-------------------------------------------------
 
