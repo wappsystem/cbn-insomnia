@@ -15,10 +15,10 @@
                 <br>             
                 <span>Randomisation</span>
         		<ul>
-        			<li ><a href=?/randomisation-table-data-spardac>Randomisation table</a></li>
+        			<li ><a href=?/randomisation-table-data-cupid>Randomisation table</a></li>
         		</ul>
 			<br>
-                <span>Notes</span>
+            <span>Notes</span>
         		<ul>
         			<li ><a href=?/notes-data>List of all notes</a></li>
         		</ul>
@@ -46,7 +46,10 @@
                     href=href.replace('?\/','');
                     href=href.replace(/\//g,'_');
                     if(app==undefined) $vm.load_module(href,'',{});
-                    else if($vm.module_list[href]!=undefined) window.open($vm.module_list[href].url);
+                    else if($vm.module_list[href]!=undefined) {
+                        $vm.alert("If you want to run Word Pairs, you must start via Participant's page and Data Entry to get the correct Word Pairs Set.");
+                        //window.open($vm.module_list[href].url);
+                    }
                     else alert("The '"+ href +"' is not defined in the module list");
                 }
             })
