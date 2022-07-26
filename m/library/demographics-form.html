@@ -71,28 +71,28 @@
                                     <label><span class="">What is your current employment status?</span></label>
                                     <fieldset class="pl-4">
                                         <label class="radiobuttons">
+                                            <input type="radio" name="employment" value="full-time" required>
+                                            <span class="checkmark"></span>Employed full-time (40+ hours/week) 
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="employment" value="part-time">
+                                            <span class="checkmark"></span>Employed part-time (&lt;40 hours/week)  
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="employment" value="unemployed">
+                                            <span class="checkmark"></span>Unemployed (currently looking for work) 
+                                        </label><br>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="employment" value="unemployed_not">
+                                            <span class="checkmark"></span>Unemployed (currently not looking for work) 
+                                        </label><br>
+                                        <label class="radiobuttons">
                                             <input type="radio" name="employment" value="retired" required>
                                             <span class="checkmark"></span>Retired
                                         </label><br>
                                         <label class="radiobuttons">
-                                            <input type="radio" name="employment" value="full-time">
-                                            <span class="checkmark"></span>Full-time employment 
-                                        </label><br>
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="employment" value="part-time">
-                                            <span class="checkmark"></span>Casually or Part-time employment 
-                                        </label><br>
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="employment" value="student">
-                                            <span class="checkmark"></span>Student 
-                                        </label><br>
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="employment" value="carer">
-                                            <span class="checkmark"></span>Full-time homemaker or carer 
-                                        </label><br>
-                                        <label class="radiobuttons">
-                                            <input type="radio" name="employment" value="unemployment">
-                                            <span class="checkmark"></span>Unemployment 
+                                            <input type="radio" name="employment" value="unable">
+                                            <span class="checkmark"></span>Unable to work 
                                         </label><br>
                                     </fieldset>
                                 </div>
@@ -111,40 +111,28 @@
                                 <div class="questiongroup">
                                     <label><span class="">What is your highest level of education?</span></label>
                                     <fieldset class="pl-4">
-                                        <label class="radiobuttons">Less than Year 12 or equivalent
-                                            <input type="radio" name="education" value="y12-" required>
+                                        <label class="radiobuttons">Primary or Secondary school (e.g. 8th grade or less)
+                                            <input type="radio" name="education" value="y8-" required>
                                             <span class="checkmark"></span>
                                         </label><br>
-                                        <label class="radiobuttons">Year 12 or equivalent
-                                            <input type="radio" name="education" value="y12">
+                                        <label class="radiobuttons">Some High School, but did not graduate 
+                                            <input type="radio" name="education" value="y8+">
                                             <span class="checkmark"></span>
                                         </label><br>
-                                        <label class="radiobuttons">Vocational Qualification i.e. TAFE
+                                        <label class="radiobuttons">High school graduate or HSC
+                                            <input type="radio" name="education" value="high-school">
+                                            <span class="checkmark"></span>
+                                        </label><br>
+                                        <label class="radiobuttons">TAFE graduate (e.g. Certificate, Diploma)
                                             <input type="radio" name="education" value="vocational">
                                             <span class="checkmark"></span>
                                         </label><br>
-                                        <label class="radiobuttons">Associate diploma
-                                            <input type="radio" name="education" value="associate">
-                                            <span class="checkmark"></span>
-                                        </label><br>
-                                        <label class="radiobuttons">Undergraduate diploma
-                                            <input type="radio" name="education" value="undergraduate">
-                                            <span class="checkmark"></span>
-                                        </label><br>
-                                        <label class="radiobuttons">Bachelor degree (including honours)
+                                        <label class="radiobuttons">University graduate (e.g. Bachelor’s degree)
                                             <input type="radio" name="education" value="bachelor">
                                             <span class="checkmark"></span>
                                         </label><br>
-                                        <label class="radiobuttons">Postgraduate diploma
+                                        <label class="radiobuttons">Postgraduate university degree (e.g. Masters, PhD)
                                             <input type="radio" name="education" value="postgraduate">
-                                            <span class="checkmark"></span>
-                                        </label><br>
-                                        <label class="radiobuttons">Master’s degree
-                                            <input type="radio" name="education" value="master">
-                                            <span class="checkmark"></span>
-                                        </label><br>
-                                        <label class="radiobuttons">Doctorate
-                                            <input type="radio" name="education" value="doctorate">
                                             <span class="checkmark"></span>
                                         </label><br>
                                     </fieldset>
@@ -163,8 +151,9 @@
     </div>
     <script>
         function F__ID() {
-            VmInclude: '__COMPONENT__/f/form.01.js'
-            //---------------------------------------
+            VmInclude:'__COMPONENT__/f/form.01.js'
+            VmInclude:__CURRENT_PATH__/shared-form.js
+            //-------------------------------------
         }
     </script>
     <style>

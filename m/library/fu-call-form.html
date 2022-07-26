@@ -280,6 +280,37 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-6">
+                                                <label><span class="">Since your visit, have you noticed any changes to your dreaming? </span></label>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="dreaming_change_Yes__ID" name="dreaming_change"
+                                                    type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="dreaming_change_Yes__ID">Yes</label>
+                                                <input id="dreaming_change_No__ID" name="dreaming_change"
+                                                    type="radio" value="No">
+                                                <label class="rd_btn" for="dreaming_change_No__ID">No</label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div id="dreaming__ID" style="display:none">
+                                    <div class="form-group">
+                                        <div class="questiongroup">
+                                            <fieldset class="">
+                                                <label style="width:100%"><span class="">If yes, please describe:</span>
+                                                    <textarea name="dreaming_change_details" id="dreaming_change_details__ID"
+                                                        class="form-control"></textarea>
+                                                </label>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
                             </div>
                         </form>
@@ -317,6 +348,15 @@
                 else {
                     $('#sleep__ID').hide();
                     $('#sleep_change_details__ID').prop('required',false);
+                }
+                //--------------
+                if($('#D__ID input[name=dreaming_change]:checked').val()=='Yes'){
+                    $('#dreaming__ID').show()
+                    $('#dreaming_change_details__ID').prop('required',true);
+                }
+                else {
+                    $('#dreaming__ID').hide();
+                    $('#dreaming_change_details__ID').prop('required',false);
                 }
                 //--------------
                 if($('#D__ID input[name=Dizziness]:checked').val()=='Yes'){
@@ -437,6 +477,16 @@
                 else {
                     $('#sleep__ID').hide();
                     $('#sleep_change_details__ID').prop('required',false);
+                }
+            })
+            $('#D__ID input[name=dreaming_change]').on('change',function(){
+                if($('#D__ID input[name=dreaming_change]:checked').val()=='Yes'){
+                    $('#dreaming__ID').show()
+                    $('#dreaming_change_details__ID').prop('required',true);
+                }
+                else {
+                    $('#dreaming__ID').hide();
+                    $('#dreaming_change_details__ID').prop('required',false);
                 }
             })
             $('#D__ID input[name=Dizziness]').on('change',function(){

@@ -1,19 +1,21 @@
 <section>
     VmInclude:__CURRENT_PATH__/grid.v1h.html
-  </section>
-  <script>
+</section>
+<script>
     function F__ID(){
         //-------------------------------------
         VmInclude:__COMPONENT__/g/grid.01.js
         VmInclude:__CURRENT_PATH__/shared-data.js
         //-------------------------------------
-        $('#title__ID').text('Flinders Fatigue Scale')
+        m.load=function(){
+            $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
+        }
         //-------------------------------------
-        var fields="FFS_1,FFS_2,FFS_3,FFS_4,FFS_5_em,FFS_5_mm,FFS_5_m,FFS_5_ma,FFS_5_la,FFS_5_ee,FFS_5_le,FFS_6,FFS_7,FFS";
+        var fields="RCSQ,RCSQ_1,RCSQ_2,RCSQ_3,RCSQ_4,RCSQ_5";
         m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Participant,"+fields+",Submit_date,Submitted_by,_Delete";
         //-------------------------------------
     }
-  </script>
-  <style>
+</script>
+<style>
     VmInclude:__COMPONENT__/g/grid.01.css
-  </style>
+</style>

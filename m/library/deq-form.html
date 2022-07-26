@@ -189,7 +189,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <!--<div class="form-group">
                                 <div class="row">
                                     <div class="col-sm control-group text-left">
                                         <label><span>7. Do you feel <u>anxious</u> right now?</span></label>
@@ -242,7 +242,7 @@
                                         <label><span></span></label>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                             <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
                         </form>
                     </div>
@@ -267,8 +267,15 @@
                     $('<style>#DEQ_4_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
                     $('<style>#DEQ_5_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
                     $('<style>#DEQ_6_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
-                    $('<style>#DEQ_7_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
-                    $('<style>#DEQ_8_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
+                    //$('<style>#DEQ_7_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
+                    //$('<style>#DEQ_8_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
+                    $('#DEQ_1_req__ID').val("OK");
+                    $('#DEQ_2_req__ID').val("OK");
+                    $('#DEQ_3_req__ID').val("OK");
+                    $('#DEQ_4_req__ID').val("OK");
+                    $('#DEQ_5_req__ID').val("OK");
+                    $('#DEQ_6_req__ID').val("OK");
+
                 }
                 else{
                     $('<style>#DEQ_1_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0px; height: 0px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
@@ -277,8 +284,8 @@
                     $('<style>#DEQ_4_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0px; height: 0px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
                     $('<style>#DEQ_5_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0px; height: 0px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
                     $('<style>#DEQ_6_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0px; height: 0px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
-                    $('<style>#DEQ_7_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0px; height: 0px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
-                    $('<style>#DEQ_8_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0px; height: 0px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
+                    //$('<style>#DEQ_7_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0px; height: 0px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
+                    //$('<style>#DEQ_8_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0px; height: 0px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');                    
                 }
                 $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
             }
@@ -313,6 +320,7 @@
                 $('#DEQ_6_req__ID').val("OK")
             })
             //-------------------------------
+            /*
             $('#DEQ_7__ID').on('click', function () {
                 $('<style>#DEQ_7_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
                 $('#DEQ_7_req__ID').val("OK")
@@ -322,6 +330,7 @@
                 $('<style>#DEQ_8_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
                 $('#DEQ_8_req__ID').val("OK")
             })
+            */
             //-------------------------------------------------
 
         }

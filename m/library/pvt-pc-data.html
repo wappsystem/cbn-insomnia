@@ -10,7 +10,7 @@
       $('#title__ID').text('PC PVT Upload file and read')
       //-------------------------------------
       var fields="File_Name,PVTDate,PVTTime,ISIMin,ISIMax,DUR,Lapse,MOODPre,MOODPost,Mouse_Button,Software,CORR,MRT,SDRT,MedRT,MinRT,MaxRT,MRRT,SDRRT,LAPS,TTLAPS,TE,RTLT100,FS,KHGT3,RTGT30,Distrib_Asym,MeanFRT,SDFRT,MeanSRT,SDSRT";
-      m.fields="_Form,_Status,_Notes,_Participant_ID,Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+      m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Participant,"+fields+",Submit_date,Submitted_by,_Delete";
       //-------------------------------------
       var cell_render=m.cell_render;
             m.cell_render=function(records,I,field,td){
