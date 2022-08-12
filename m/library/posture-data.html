@@ -10,11 +10,22 @@
       $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
       //-------------------------------------
       var dyn_fields="Posture_systolicBP,Posture_diastolicBP,Data_File,Trial_Type,Sub_Type,X_Avg,X_Max,X_Min,X_SD,X_Skew,X_Krts,X_D_Avg,Y_Avg,Y_Max,Y_Min,Y_SD,Y_Skew,Y_Krts,Y_D_Avg,Rdl_D_Avg,Rdl_D_SD,Area_Circ,Area_Rect,Area_Efft,Path_Lgth,Unit_Path,PathArea,Vx_Max,Vx_Min,Vy_Max,Vy_Min,V_Avg,DCG_X,DCG_Y,Cov,Area95,Majr95,Minr95,Tan95,Slope95,BOS0x,BOS0y,BOS1x,BOS1y,BOS2x,BOS2y,BOS3x,BOS3y,BOS4x,BOS4y,BOS5x,BOS5y,BOS6x,BOS6y,BOS7x,BOS7y";
-      m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Participant,"+dyn_fields+",Submit_date,Submitted_by,_Delete";
+      m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Participant,File_Name,"+dyn_fields+",Submit_date,Submitted_by,_Delete";
       //-------------------------------------
       m.load=function(){
         $vm.dyn_fields=dyn_fields;
       }
+      var cell_render=m.cell_render;
+      m.cell_render=function(records,I,field,td){
+          cell_render(records,I,field,td);
+          switch(field){
+              case 'File_Name':
+                  m.set_file_link(records,I,field,td)
+                  break;
+          }
+      }
+      //-------------------------------------
+
   }
 </script>
 <style>
