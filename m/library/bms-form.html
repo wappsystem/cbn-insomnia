@@ -10,7 +10,7 @@
                         <form id="F__ID">
                             <h3 id=title__ID></h3>
                             <!-- participant part for all tsak forms -------------------->
-                            <div id="participant_div__ID" >
+                            <div id="participant_div__ID">
                                 <div class="form-group">
                                     <fieldset class="subquestions">
                                         <label><span class="">Participant</span>
@@ -23,6 +23,735 @@
                                     </fieldset>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6" >
+                                        <label><span class="">Date</span>
+                                            <input class="form-control" type="date" name="Date">
+                                        </label><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4>1. RECORD ADVERSE EVENTS/CHANGES TO CONCOM MEDS</h4>
+                            </div>
+                            <div class="form-group">                              
+                                <label><span class="">Since we last saw you, have you had changes in: </span></label>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label><span class="">The severity of your insomnia? <i>(i.e. has it improved/got worse)</i></span></label>
+                                    </div>
+                                    <div class="col-12">
+                                        <input id="Insomnia_severity_Yes__ID" name="Insomnia_severity" type="radio" value="Yes">
+                                        <label class="rd_btn" for="Insomnia_severity_Yes__ID">Yes</label>
+                                        <input id="Insomnia_severity_No__ID" name="Insomnia_severity" type="radio" value="No">
+                                        <label class="rd_btn" for="Insomnia_severity_No__ID">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">                              
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label><span class="">Has the patient had any changes in health status or medical conditions since the previous visit? <i>If yes, please record in the participant Adverse Event Log</i></span></label>
+                                    </div>
+                                    <div class="col-12">
+                                        <input id="Health_status_Yes__ID" name="Health_status" type="radio" value="Yes">
+                                        <label class="rd_btn" for="Health_status_Yes__ID">Yes</label>
+                                        <input id="Health_status_No__ID" name="Health_status" type="radio" value="No">
+                                        <label class="rd_btn" for="Health_status_No__ID">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">                              
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label><span class="">Has the patient had any changes to concomitant medications since the previous visit? <i>If yes, please record change in Concomitant Medication Log in participant folder.</i></span></label>
+                                    </div>
+                                    <div class="col-12">
+                                        <input id="Concom_med_Yes__ID" name="Concom_med" type="radio" value="Yes">
+                                        <label class="rd_btn" for="Concom_med_Yes__ID">Yes</label>
+                                        <input id="Concom_med_No__ID" name="Concom_med" type="radio" value="No">
+                                        <label class="rd_btn" for="Concom_med_No__ID">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">                              
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label><span class="">Comments</span></label>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea name="Concom_med_comments" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4>2. URINARY DRUG SCREEN </h4>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-3">
+                                        <label><span class="">Cannabis (THC)</span></label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <input id="THC_Yes__ID" name="THC" type="radio" value="+ve">
+                                        <label class="rd_btn" for="THC_Yes__ID">+ve</label>
+                                        <input id="THC_No__ID" name="THC" type="radio" value="-ve">
+                                        <label class="rd_btn" for="THC_No__ID">-ve</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-3">
+                                        <label><span class="">Cocaine (COC)</span></label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <input id="COC_Yes__ID" name="COC" type="radio" value="+ve">
+                                        <label class="rd_btn" for="COC_Yes__ID">+ve</label>
+                                        <input id="COC_No__ID" name="COC" type="radio" value="-ve">
+                                        <label class="rd_btn" for="COC_No__ID">-ve</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-3">
+                                        <label><span class="">Amphetamine (AMP)</span></label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <input id="AMP_Yes__ID" name="AMP" type="radio" value="+ve">
+                                        <label class="rd_btn" for="AMP_Yes__ID">+ve</label>
+                                        <input id="AMP_No__ID" name="AMP" type="radio" value="-ve">
+                                        <label class="rd_btn" for="AMP_No__ID">-ve</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-3">
+                                        <label><span class="">Methamphetamine (MET)</span></label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <input id="MET_Yes__ID" name="MET" type="radio" value="+ve">
+                                        <label class="rd_btn" for="MET_Yes__ID">+ve</label>
+                                        <input id="MET_No__ID" name="MET" type="radio" value="-ve">
+                                        <label class="rd_btn" for="MET_No__ID">-ve</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-3">
+                                        <label><span class="">Benzodiazepines (BZO)</span></label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <input id="BZO_Yes__ID" name="BZO" type="radio" value="+ve">
+                                        <label class="rd_btn" for="BZO_Yes__ID">+ve</label>
+                                        <input id="BZO_No__ID" name="BZO" type="radio" value="-ve">
+                                        <label class="rd_btn" for="BZO_No__ID">-ve</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-3">
+                                        <label><span class="">Opiates (OPI)</span></label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <input id="OPI_Yes__ID" name="OPI" type="radio" value="+ve">
+                                        <label class="rd_btn" for="OPI_Yes__ID">+ve</label>
+                                        <input id="OPI_No__ID" name="OPI" type="radio" value="-ve">
+                                        <label class="rd_btn" for="OPI_No__ID">-ve</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-3">
+                                        <label><span class="">Alcohol (ALC)</span></label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <input id="ALC_Yes__ID" name="ALC" type="radio" value="+ve">
+                                        <label class="rd_btn" for="ALC_Yes__ID">+ve</label>
+                                        <input id="ALC_No__ID" name="ALC" type="radio" value="-ve">
+                                        <label class="rd_btn" for="ALC_No__ID">-ve</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-3">
+                                        <label><span class="">Pregnancy screen</span></label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <input id="Pregnancy_screen_Yes__ID" name="Pregnancy_screen" type="radio" value="+ve">
+                                        <label class="rd_btn" for="Pregnancy_screen_Yes__ID">+ve</label>
+                                        <input id="Pregnancy_screen_No__ID" name="Pregnancy_screen" type="radio" value="-ve">
+                                        <label class="rd_btn" for="Pregnancy_screen_No__ID">-ve</label>
+                                        <input id="Pregnancy_screen_Inv__ID" name="Pregnancy_screen" type="radio" value="Invalid">
+                                        <label class="rd_btn" for="Pregnancy_screen_Inv__ID">Invalid</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label><span class=""><i>Adulterant checks</i></span></label>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-3">
+                                        <label><span class="">Creatinine</span></label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <input id="Creatinine_Yes__ID" name="Creatinine" type="radio" value="Normal">
+                                        <label class="rd_btn" for="Creatinine_Yes__ID">Normal</label>
+                                        <input id="Creatinine_No__ID" name="Creatinine" type="radio" value="Abnormal">
+                                        <label class="rd_btn" for="Creatinine_No__ID">Abnormal</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-3">
+                                        <label><span class="">Nitrite</span></label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <input id="Nitrite_Yes__ID" name="Nitrite" type="radio" value="Normal">
+                                        <label class="rd_btn" for="Nitrite_Yes__ID">Normal</label>
+                                        <input id="Nitrite_No__ID" name="Nitrite" type="radio" value="Abnormal">
+                                        <label class="rd_btn" for="Nitrite_No__ID">Abnormal</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-3">
+                                        <label><span class="">Glutaraldehyde</span></label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <input id="Glutaraldehyde_Yes__ID" name="Glutaraldehyde" type="radio" value="Normal">
+                                        <label class="rd_btn" for="Glutaraldehyde_Yes__ID">Normal</label>
+                                        <input id="Glutaraldehyde_No__ID" name="Glutaraldehyde" type="radio" value="Abnormal">
+                                        <label class="rd_btn" for="Glutaraldehyde_No__ID">Abnormal</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-3">
+                                        <label><span class="">pH</span></label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <input id="pH_Yes__ID" name="pH" type="radio" value="Normal">
+                                        <label class="rd_btn" for="pH_Yes__ID">Normal</label>
+                                        <input id="pH_No__ID" name="pH" type="radio" value="Abnormal">
+                                        <label class="rd_btn" for="pH_No__ID">Abnormal</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-3">
+                                        <label><span class="">Specific gravity</span></label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <input id="Spec_gravity_Yes__ID" name="Spec_gravity" type="radio" value="Normal">
+                                        <label class="rd_btn" for="Spec_gravity_Yes__ID">Normal</label>
+                                        <input id="Spec_gravity_No__ID" name="Spec_gravity" type="radio" value="Abnormal">
+                                        <label class="rd_btn" for="Spec_gravity_No__ID">Abnormal</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-3">
+                                        <label><span class="">Oxidant/bleach</span></label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <input id="Oxidant_Yes__ID" name="Oxidant" type="radio" value="Normal">
+                                        <label class="rd_btn" for="Oxidant_Yes__ID">Normal</label>
+                                        <input id="Oxidant_No__ID" name="Oxidant" type="radio" value="Abnormal">
+                                        <label class="rd_btn" for="Oxidant_No__ID">Abnormal</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4>3. VITAL SIGNS</h4>
+                            </div>
+                            <div class="form-group">                              
+                                <label><span class="">Blood pressure – sitting (mmHg): <br><br><i>Use LEFT arm; Patient must have rested for 5 min; Measure to nearest 5mmHg</i></span></label>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6">
+                                        <label><span class="">SYSTOLIC</span>
+                                            <input name="systolic" type="number" class="form-control">
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <label><span class="">DIASTOLIC</span>
+                                            <input name="diastolic" type="number" class="form-control">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">                              
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6">
+                                        <label><span class="">Pulse rate - resting (beats/min)</span>
+                                            <input name="pulse_rate" type="number" class="form-control">
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <label><span class="">Respiration – resting (breaths/min)</span>
+                                            <input name="breath_rate" type="number" class="form-control">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4>4. EXCLUSION CRITERIA</h4>
+                                <label><span>USE OF THE FOLLOWING or CHANGE TO ABSOLUTE EXCLUSION CRITERIA: </span></label>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span><b>Cannabis</b></span><span  style="font-weight: 400;"> (has the patient consumed any cannabis or cannabinoid-based products since the previous visit, or in the 3 months prior as determined by medical officer?)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Cannabis_Yes__ID" name="Cannabis" type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="Cannabis_Yes__ID">Yes</label>
+                                                <input id="Cannabis_No__ID" name="Cannabis" type="radio" value="No">
+                                                <label class="rd_btn" for="Cannabis_No__ID">No</label>
+                                            </div>
+                                            <div id=Cannabis__ID class="col-sm-12 col-md-8" style="display:none">
+                                                <label style="width:100%"><span class="">Notes</span>
+                                                    <textarea class="form-control" type="text" name="Cannabis_Notes"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span><b>CNS-active drugs</b></span><span  style="font-weight: 400;"> (has the patient consumed any CNS-active drugs [amphetamines, cocaine, antidepressants, benzodiazepines] since the previous visit, or in the 3 months prior as determined by medical officer?)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="CNS_Yes__ID" name="CNS" type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="CNS_Yes__ID">Yes</label>
+                                                <input id="CNS_No__ID" name="CNS" type="radio" value="No">
+                                                <label class="rd_btn" for="CNS_No__ID">No</label>
+                                            </div>
+                                            <div id=CNS__ID class="col-sm-12 col-md-8" style="display:none">
+                                                <label style="width:100%"><span class="">If yes, record on concomitant medications.</span>
+                                                    <!--<textarea class="form-control" type="text" name="CNS_Notes"></textarea>-->
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span><b>Medications that may impact metabolism of cannabinoid products</b></span><span  style="font-weight: 400;"> (has the patient used medications that may clinically significantly impact metabolism and/or excretion of cannabinoids [e.g., CYP450 enzyme inducers/inhibitors] since the previous visit, or in the 3 months prior as determined by medical officer?)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Metabolism_Yes__ID" name="Metabolism" type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="Metabolism_Yes__ID">Yes</label>
+                                                <input id="Metabolism_No__ID" name="Metabolism" type="radio" value="No">
+                                                <label class="rd_btn" for="Metabolism_No__ID">No</label>
+                                            </div>
+                                            <div id=Metabolism__ID class="col-sm-12 col-md-8" style="display:none">
+                                                <label style="width:100%"><span class="">If yes, record on concomitant medications.</span>
+                                                    <!--<textarea class="form-control" type="text" name="Metabolism_Notes"></textarea>-->
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span><b>Psychological or behavioural treatment for insomnia</b></span><span  style="font-weight: 400;"> (has the patient undergone psychological or behavioural treatment for insomnia [including cognitive behavioural therapy] since the previous visit, or in the 3 months prior as determined by medical officer?)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Tx_insomnia_Yes__ID" name="Tx_insomnia" type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="Tx_insomnia_Yes__ID">Yes</label>
+                                                <input id="Tx_insomnia_No__ID" name="Tx_insomnia" type="radio" value="No">
+                                                <label class="rd_btn" for="Tx_insomnia_No__ID">No</label>
+                                            </div>
+                                            <div id=Tx_insomnia__ID class="col-sm-12 col-md-8" style="display:none">
+                                                <label style="width:100%"><span class="">Notes</span>
+                                                    <textarea class="form-control" type="text" name="Tx_insomnia_Notes"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span><b>Nicotine</b></span><span  style="font-weight: 400;"> (has the patient developed a nicotine dependence [i.e., daily smoking] since the previous visit, or in the 3 months prior as determined by medical officer?)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Nicotine_Yes__ID" name="Nicotine" type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="Nicotine_Yes__ID">Yes</label>
+                                                <input id="Nicotine_No__ID" name="Nicotine" type="radio" value="No">
+                                                <label class="rd_btn" for="Nicotine_No__ID">No</label>
+                                            </div>
+                                            <div id=Nicotine__ID class="col-sm-12 col-md-8" style="display:none">
+                                                <label style="width:100%"><span class="">Notes</span>
+                                                    <textarea class="form-control" type="text" name="Nicotine_Notes"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span><b>Pregnancy</b></span><span  style="font-weight: 400;"> (has the patient become pregnant since the previous visit?)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Pregnancy_Yes__ID" name="Pregnancy" type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="Pregnancy_Yes__ID">Yes</label>
+                                                <input id="Pregnancy_No__ID" name="Pregnancy" type="radio" value="No">
+                                                <label class="rd_btn" for="Pregnancy_No__ID">No</label>
+                                            </div>
+                                            <div id=Pregnancy__ID class="col-sm-12 col-md-8" style="display:none">
+                                                <label style="width:100%"><span class="">Notes</span>
+                                                    <textarea class="form-control" type="text" name="Pregnancy_Notes"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span><b>Shift work</b></span><span  style="font-weight: 400;"> (has the patient commenced regular shift work since the previous visit, or in the 3 months prior as determined by medical officer?)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Shift_work_Yes__ID" name="Shift_work" type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="Shift_work_Yes__ID">Yes</label>
+                                                <input id="Shift_work_No__ID" name="Shift_work" type="radio" value="No">
+                                                <label class="rd_btn" for="Shift_work_No__ID">No</label>
+                                            </div>
+                                            <div id=Shift_work__ID class="col-sm-12 col-md-8" style="display:none">
+                                                <label style="width:100%"><span class="">Notes</span>
+                                                    <textarea class="form-control" type="text" name="Shift_work_Notes"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span><b>Transmeridian travel</b></span><span  style="font-weight: 400;"> (has the patient undertaken transmeridian travel [across two time zones] in the previous month as determined by medical officer?)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Travel_Yes__ID" name="Travel" type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="Travel_Yes__ID">Yes</label>
+                                                <input id="Travel_No__ID" name="Travel" type="radio" value="No">
+                                                <label class="rd_btn" for="Travel_No__ID">No</label>
+                                            </div>
+                                            <div id=Travel__ID class="col-sm-12 col-md-8" style="display:none">
+                                                <label style="width:100%"><span class="">Notes</span>
+                                                    <textarea class="form-control" type="text" name="Travel_Notes"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span><b>Caffeine</b></span><span  style="font-weight: 400;"> (has the patient consumed caffeine in the 24 hours prior?)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Caffeine_Yes__ID" name="Caffeine" type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="Caffeine_Yes__ID">Yes</label>
+                                                <input id="Caffeine_No__ID" name="Caffeine" type="radio" value="No">
+                                                <label class="rd_btn" for="Caffeine_No__ID">No</label>
+                                            </div>
+                                            <div id=Caffeine__ID class="col-sm-12 col-md-8" style="display:none">
+                                                <label style="width:100%"><span class="">Notes</span>
+                                                    <textarea class="form-control" type="text" name="Caffeine_Notes"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span><b>Alcohol</b></span><span  style="font-weight: 400;"> (has the patient consumed alcohol in the 24 hours prior?)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Alcohol_Yes__ID" name="Alcohol" type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="Alcohol_Yes__ID">Yes</label>
+                                                <input id="Alcohol_No__ID" name="Alcohol" type="radio" value="No">
+                                                <label class="rd_btn" for="Alcohol_No__ID">No</label>
+                                            </div>
+                                            <div id=Alcohol__ID class="col-sm-12 col-md-8" style="display:none">
+                                                <label style="width:100%"><span class="">Notes</span>
+                                                    <textarea class="form-control" type="text" name="Alcohol_Notes"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span><b>Active hypertension</b></span><span  style="font-weight: 400;"> (resting systolic > 150mmgHg, diastolic>100mmHg)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Hypertension_Yes__ID" name="Hypertension" type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="Hypertension_Yes__ID">Yes</label>
+                                                <input id="Hypertension_No__ID" name="Hypertension" type="radio" value="No">
+                                                <label class="rd_btn" for="Hypertension_No__ID">No</label>
+                                            </div>
+                                            <div id=Hypertension__ID class="col-sm-12 col-md-8" style="display:none">
+                                                <label style="width:100%"><span class="">Notes</span>
+                                                    <textarea class="form-control" type="text" name="Hypertension_Notes"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span>Cardiovascular disease</span><span  style="font-weight: 400;"> (change to cardiovascular health since the previous visit?)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="CV_disease_Yes__ID" name="CV_disease" type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="CV_disease_Yes__ID">Yes</label>
+                                                <input id="CV_disease_No__ID" name="CV_disease" type="radio" value="No">
+                                                <label class="rd_btn" for="CV_disease_No__ID">No</label>
+                                            </div>
+                                            <div id=CV_disease__ID class="col-sm-12 col-md-8" style="display:none">
+                                                <label style="width:100%"><span class="">Notes</span>
+                                                    <textarea class="form-control" type="text" name="CV_disease_Notes"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span>Drug or alcohol dependence</span><span  style="font-weight: 400;"> (has the participant developed a drug or alcohol dependency since the previous visit?)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Drug_dependence_Yes__ID" name="Drug_dependence" type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="Drug_dependence_Yes__ID">Yes</label>
+                                                <input id="Drug_dependence_No__ID" name="Drug_dependence" type="radio" value="No">
+                                                <label class="rd_btn" for="Drug_dependence_No__ID">No</label>
+                                            </div>
+                                            <div id=Drug_dependence__ID class="col-sm-12 col-md-8" style="display:none">
+                                                <label style="width:100%"><span class="">Notes</span>
+                                                    <textarea class="form-control" type="text" name="Drug_dependence_Notes"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span>Lifetime manic episode</span><span  style="font-weight: 400;"> (has the participant experienced a manic episode [DSM-V] since the previous visit?)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Manic_Yes__ID" name="Manic" type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="Manic_Yes__ID">Yes</label>
+                                                <input id="Manic_No__ID" name="Manic" type="radio" value="No">
+                                                <label class="rd_btn" for="Manic_No__ID">No</label>
+                                            </div>
+                                            <div id=Manic__ID class="col-sm-12 col-md-8" style="display:none">
+                                                <label style="width:100%"><span class="">Notes</span>
+                                                    <textarea class="form-control" type="text" name="Manic_Notes"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span>Lifetime psychotic illness</span><span  style="font-weight: 400;"> (has the participant experienced a psychotic episode [DSM-V] since the previous visit?)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Psychotic_Yes__ID" name="Psychotic" type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="Psychotic_Yes__ID">Yes</label>
+                                                <input id="Psychotic_No__ID" name="Psychotic" type="radio" value="No">
+                                                <label class="rd_btn" for="Psychotic_No__ID">No</label>
+                                            </div>
+                                            <div id=Psychotic__ID class="col-sm-12 col-md-8" style="display:none">
+                                                <label style="width:100%"><span class="">Notes</span>
+                                                    <textarea class="form-control" type="text" name="Psychotic_Notes"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span>Active mood or anxiety disorder</span><span  style="font-weight: 400;"> (has the participant experienced changes to mood or anxiety [DSM-V] since the previous visit?)</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Anxiety_Yes__ID" name="Anxiety" type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="Anxiety_Yes__ID">Yes</label>
+                                                <input id="Anxiety_No__ID" name="Anxiety" type="radio" value="No">
+                                                <label class="rd_btn" for="Anxiety_No__ID">No</label>
+                                            </div>
+                                            <div id=Anxiety__ID class="col-sm-12 col-md-8" style="display:none">
+                                                <label style="width:100%"><span class="">Notes</span>
+                                                    <textarea class="form-control" type="text" name="Anxiety_Notes"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label style="border-color: black;border-width: medium;border-style:solid;padding:10px;background-color: lightgrey;"><span  style="font-weight: 400;">If answered <span  style="font-weight: 600;">YES</span> to any of the above, the patient is unable to participate in this treatment visit. Please reschedule and/or review eligibility for study.  </span></label>
+                            </div>
+                            <div class="form-group">
+                                <h4>5. CHANGE TO ELIGIBILITY?</h4>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span>Did any of the <u>exclusion criteria</u> disqualify the participant from study entry?</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-4">
+                                                <input id="Exclusion_Yes__ID" name="Exclusion" type="radio" value="Yes" required>
+                                                <label class="rd_btn" for="Exclusion_Yes__ID">Yes</label>
+                                                <input id="Exclusion_No__ID" name="Exclusion" type="radio" value="No">
+                                                <label class="rd_btn" for="Exclusion_No__ID">No</label>
+                                            </div>
+                                            <div id=Exclusion__ID class="col-sm-12 col-md-8" style="display:none">
+                                                <label style="width:100%"><span class="">If yes, please comment:</span>
+                                                    <textarea class="form-control" type="text" name="Exclusion_Comment"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4>6. PARTICIPANT ENROLMENT STATUS</h4>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label><span>Individuals’ enrolment status:</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <input id="Exclusion_Ineligible__ID" name="Enrolment" type="radio" value="Ineligible" required>
+                                                <label style="width:250px" class="rd_btn" for="Exclusion_Ineligible__ID">Ineligible</label><br>
+                                                <input id="Exclusion_randomised__ID" name="Enrolment" type="radio" value="Eligible and to be randomised">
+                                                <label style="width:250px" class="rd_btn" for="Exclusion_randomised__ID">Eligible and to be randomised</label><br>
+                                                <input id="Exclusion_Eligible_but_declines__ID" name="Enrolment" type="radio" value="Eligible but declines">
+                                                <label style="width:250px" class="rd_btn" for="Exclusion_Eligible_but_declines__ID">Eligible but declines</label><br>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -34,125 +763,293 @@
             //-------------------------------------
             VmInclude: '__COMPONENT__/f/form.01.js'
             VmInclude: '__CURRENT_PATH__/shared-form.js'
-
+            //------------------------------------
+            var load2 = m.load;
+            m.load = function () {
+                load2();
+                if ($('[type="date"]').prop('type') != 'date') {
+                    $('[type="date"]').datepicker();
+                }
+                //--------------
+                if($('#D__ID input[name=Cannabis]:checked').val()=='Yes'){
+                    $('#Cannabis__ID').show()
+                }
+                else {
+                    $('#Cannabis__ID').hide()
+                }
+                //--------------
+                if($('#D__ID input[name=CNS]:checked').val()=='Yes'){
+                    $('#CNS__ID').show()
+                }
+                else {
+                    $('#CNS__ID').hide()
+                }
+                //--------------
+                if($('#D__ID input[name=Metabolism]:checked').val()=='Yes'){
+                    $('#Metabolism__ID').show()
+                }
+                else {
+                    $('#Metabolism__ID').hide()
+                }
+                //--------------
+                if($('#D__ID input[name=Tx_insomnia]:checked').val()=='Yes'){
+                    $('#Tx_insomnia__ID').show()
+                }
+                else {
+                    $('#Tx_insomnia__ID').hide()
+                }
+                //--------------
+                if($('#D__ID input[name=Nicotine]:checked').val()=='Yes'){
+                    $('#Nicotine__ID').show()
+                }
+                else {
+                    $('#Nicotine__ID').hide()
+                }
+                //--------------
+                if($('#D__ID input[name=Pregnancy]:checked').val()=='Yes'){
+                    $('#Pregnancy__ID').show()
+                }
+                else {
+                    $('#Pregnancy__ID').hide()
+                }
+                //--------------
+                if($('#D__ID input[name=Shift_work]:checked').val()=='Yes'){
+                    $('#Shift_work__ID').show()
+                }
+                else {
+                    $('#Shift_work__ID').hide()
+                }
+                //--------------
+                if($('#D__ID input[name=Travel]:checked').val()=='Yes'){
+                    $('#Travel__ID').show()
+                }
+                else {
+                    $('#Travel__ID').hide()
+                }
+                //--------------
+                if($('#D__ID input[name=Caffeine]:checked').val()=='Yes'){
+                    $('#Caffeine__ID').show()
+                }
+                else {
+                    $('#Caffeine__ID').hide()
+                }
+                //--------------
+                if($('#D__ID input[name=Alcohol]:checked').val()=='Yes'){
+                    $('#Alcohol__ID').show()
+                }
+                else {
+                    $('#Alcohol__ID').hide()
+                }
+                //--------------
+                if($('#D__ID input[name=Hypertension]:checked').val()=='Yes'){
+                    $('#Hypertension__ID').show()
+                }
+                else {
+                    $('#Hypertension__ID').hide()
+                }
+                //--------------
+                if($('#D__ID input[name=CV_disease]:checked').val()=='Yes'){
+                    $('#CV_disease__ID').show()
+                }
+                else {
+                    $('#CV_disease__ID').hide()
+                }
+                //--------------
+                if($('#D__ID input[name=Drug_dependence]:checked').val()=='Yes'){
+                    $('#Drug_dependence__ID').show()
+                }
+                else {
+                    $('#Drug_dependence__ID').hide()
+                }
+                //--------------
+                if($('#D__ID input[name=Manic]:checked').val()=='Yes'){
+                    $('#Manic__ID').show()
+                }
+                else {
+                    $('#Manic__ID').hide()
+                }
+                //--------------
+                if($('#D__ID input[name=Psychotic]:checked').val()=='Yes'){
+                    $('#Psychotic__ID').show()
+                }
+                else {
+                    $('#Psychotic__ID').hide()
+                }
+                //--------------
+                if($('#D__ID input[name=Anxiety]:checked').val()=='Yes'){
+                    $('#Anxiety__ID').show()
+                }
+                else {
+                    $('#Anxiety__ID').hide()
+                }
+                //--------------
+                if($('#D__ID input[name=Exclusion]:checked').val()=='Yes'){
+                    $('#Exclusion__ID').show()
+                }
+                else {
+                    $('#Exclusion__ID').hide()
+                }
+                //--------------
+            }
+            //------------------------------------
+            $('#D__ID input[name=Cannabis]').on('change',function(){
+                if($('#D__ID input[name=Cannabis]:checked').val()=='Yes'){
+                    $('#Cannabis__ID').show()
+                }
+                else {
+                    $('#Cannabis__ID').hide()
+                }
+            })
+            $('#D__ID input[name=CNS]').on('change',function(){
+                if($('#D__ID input[name=CNS]:checked').val()=='Yes'){
+                    $('#CNS__ID').show()
+                }
+                else {
+                    $('#CNS__ID').hide()
+                }
+            })
+            $('#D__ID input[name=Metabolism]').on('change',function(){
+                if($('#D__ID input[name=Metabolism]:checked').val()=='Yes'){
+                    $('#Metabolism__ID').show()
+                }
+                else {
+                    $('#Metabolism__ID').hide()
+                }
+            })
+            $('#D__ID input[name=Tx_insomnia]').on('change',function(){
+                if($('#D__ID input[name=Tx_insomnia]:checked').val()=='Yes'){
+                    $('#Tx_insomnia__ID').show()
+                }
+                else {
+                    $('#Tx_insomnia__ID').hide()
+                }
+            })
+            $('#D__ID input[name=Nicotine]').on('change',function(){
+                if($('#D__ID input[name=Nicotine]:checked').val()=='Yes'){
+                    $('#Nicotine__ID').show()
+                }
+                else {
+                    $('#Nicotine__ID').hide()
+                }
+            })
+            $('#D__ID input[name=Pregnancy]').on('change',function(){
+                if($('#D__ID input[name=Pregnancy]:checked').val()=='Yes'){
+                    $('#Pregnancy__ID').show()
+                }
+                else {
+                    $('#Pregnancy__ID').hide()
+                }
+            })
+            $('#D__ID input[name=Shift_work]').on('change',function(){
+                if($('#D__ID input[name=Shift_work]:checked').val()=='Yes'){
+                    $('#Shift_work__ID').show()
+                }
+                else {
+                    $('#Shift_work__ID').hide()
+                }
+            })
+            $('#D__ID input[name=Travel]').on('change',function(){
+                if($('#D__ID input[name=Travel]:checked').val()=='Yes'){
+                    $('#Travel__ID').show()
+                }
+                else {
+                    $('#Travel__ID').hide()
+                }
+            })
+            $('#D__ID input[name=Caffeine]').on('change',function(){
+                if($('#D__ID input[name=Caffeine]:checked').val()=='Yes'){
+                    $('#Caffeine__ID').show()
+                }
+                else {
+                    $('#Caffeine__ID').hide()
+                }
+            })
+            $('#D__ID input[name=Alcohol]').on('change',function(){
+                if($('#D__ID input[name=Alcohol]:checked').val()=='Yes'){
+                    $('#Alcohol__ID').show()
+                }
+                else {
+                    $('#Alcohol__ID').hide()
+                }
+            })
+            $('#D__ID input[name=Hypertension]').on('change',function(){
+                if($('#D__ID input[name=Hypertension]:checked').val()=='Yes'){
+                    $('#Hypertension__ID').show()
+                }
+                else {
+                    $('#Hypertension__ID').hide()
+                }
+            })
+            $('#D__ID input[name=CV_disease]').on('change',function(){
+                if($('#D__ID input[name=CV_disease]:checked').val()=='Yes'){
+                    $('#CV_disease__ID').show()
+                }
+                else {
+                    $('#CV_disease__ID').hide()
+                }
+            })
+            $('#D__ID input[name=Drug_dependence]').on('change',function(){
+                if($('#D__ID input[name=Drug_dependence]:checked').val()=='Yes'){
+                    $('#Drug_dependence__ID').show()
+                }
+                else {
+                    $('#Drug_dependence__ID').hide()
+                }
+            })
+            $('#D__ID input[name=Manic]').on('change',function(){
+                if($('#D__ID input[name=Manic]:checked').val()=='Yes'){
+                    $('#Manic__ID').show()
+                }
+                else {
+                    $('#Manic__ID').hide()
+                }
+            })
+            $('#D__ID input[name=Psychotic]').on('change',function(){
+                if($('#D__ID input[name=Psychotic]:checked').val()=='Yes'){
+                    $('#Psychotic__ID').show()
+                }
+                else {
+                    $('#Psychotic__ID').hide()
+                }
+            })
+            $('#D__ID input[name=Anxiety]').on('change',function(){
+                if($('#D__ID input[name=Anxiety]:checked').val()=='Yes'){
+                    $('#Anxiety__ID').show()
+                }
+                else {
+                    $('#Anxiety__ID').hide()
+                }
+            })
+            $('#D__ID input[name=Exclusion]').on('change',function(){
+                if($('#D__ID input[name=Exclusion]:checked').val()=='Yes'){
+                    $('#Exclusion__ID').show()
+                }
+                else {
+                    $('#Exclusion__ID').hide()
+                }
+            })
         }
       //------------------------------------
     </script>
     <style>
-        #D__ID #indicator__ID {
-            margin-left: 91px;
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 20px;
-            height: 5px;
-            background-color: red;
-            z-index: 200
+        #D__ID input[type="radio"] {
+            opacity: 0;
         }
-#F__ID .vas {
-    position: relative;
-    height: 419px;
-    width: 200px;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    -ms-flex-direction: column;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    -ms-flex-align: stretch;
-    -webkit-box-align: stretch;
-    align-items: stretch;
-    -ms-flex-pack: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -ms-flex: 1;
-    -webkit-box-flex: 1;
-    flex: 1;
-    text-align: center;
-}
-#F__ID .vas__footer, .vas__header {
-    -ms-flex-positive: 0;
-    -webkit-box-flex: 0;
-    flex-grow: 0;
-    font-weight: 700;
-    max-width: 150px;
-    margin: 0 auto;
-}
-#F__ID .vas__body {
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    -ms-flex-direction: column;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    -ms-flex-align: stretch;
-    -webkit-box-align: stretch;
-    align-items: stretch;
-    -ms-flex-positive: 1;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    padding: 10px;
-    margin: 0 auto;
-}
-#F__ID .vas-tick {
-    position: relative;
-    text-align: center;
-    -ms-flex: 1;
-    -webkit-box-flex: 1;
-    flex: 1;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    -ms-flex-pack: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    -webkit-box-align: center;
-    align-items: center;
-    cursor: pointer;
-}
 
-#F__ID .vas-tick__value {
-    position: absolute;
-    top: 50%;
-    opacity: 0;
-    -webkit-transform: translateY(-50%) translateX(-40px);
-    transform: translateY(-50%) translateX(-40px);
-    visibility: hidden;
-}
-#F__ID .vas-tick--step .vas-tick__value {
-    opacity: 1;
-    visibility: visible;
-}
-#F__ID .vas-tick__line {
-    opacity: 1;
-    visibility: visible;
-    width: 10px;
-    height: 1px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-}
-#F__ID .vas-tick--step .vas-tick__line {
-    width: 28px;
-    height: 2px;
+        #D__ID .rd_btn {
+            padding: 10px 20px;
+            background-color: #ddd;
+            border: thin solid #b1b1b1;
+            border-radius: 10px;
+            margin: 5px;
+            display: inline-block;
+        }
 
-}
-#F__ID .vas-tick--step1 .vas-tick__line {
-    width: 15px;
-    height: 1px;
-}
-#yht__ID{
-        padding-top:0;
-    }
-@media (min-width: 1024x) {
-    #yht__ID{
-        padding-top:35px;
-    }
-}
-
+        #D__ID input[type="radio"]:checked+label {
+            background-color: #43884f;
+            cursor: default;
+            color: #E6E6E6;
+        }
 
         VmInclude:__CURRENT_PATH__/wappsystem-form.css
     </style>

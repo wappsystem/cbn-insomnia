@@ -1,19 +1,24 @@
 <section>
-  VmInclude:__CURRENT_PATH__/grid.v1h.html
-</section>
-<script>
-  function F__ID(){
-      //-------------------------------------
-      VmInclude:__COMPONENT__/g/grid.01.js
-      VmInclude:__CURRENT_PATH__/shared-data.js
-      //-------------------------------------
-      $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
-      //-------------------------------------
-      var fields="";
-      m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Participant,"+fields+",Submit_date,Submitted_by,_Delete";
-      //-------------------------------------
-  }
-</script>
-<style>
-  VmInclude:__COMPONENT__/g/grid.01.css
-</style>
+    VmInclude:__CURRENT_PATH__/grid.v1h.html
+  </section>
+  <script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__COMPONENT__/g/grid.01.js
+        VmInclude:__CURRENT_PATH__/shared-data.js
+        //-------------------------------------
+        $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
+        //-------------------------------------
+        var fields="date,Insomnia_severity,Health_status,Concom_med,Concom_med_comments";
+        fields+=",THC,COC,AMP,MET,BZO,OPI,ALC,Pregnancy_screen,Creatinine,Nitrite,Glutaraldehyde,pH,Spec_gravity,Oxidant,"
+        fields+=",systolic,diastolic,pulse_rate,breath_rate";
+        fields+=",Cannabis,Cannabis_Notes,CNS,Metabolism,Tx_insomnia,Tx_insomnia_Notes,Nicotine,Nicotine_Notes,Pregnancy,Pregnancy_Notes,Shift_work,Shift_work_Notes,Travel,Travel_Notes,Caffeine,Caffeine_Notes,Alcohol,Alcohol_Notes,Hypertension,Hypertension_Notes,CV_disease,CV_disease_Notes,Drug_dependence,Drug_dependence_Notes,Manic,Manic_Notes,Psychotic,Psychotic_Notes,Anxiety,Anxiety_Notes";
+        fields+=",Exclusion,Exclusion_Comment";
+        fields+=",Enrolment";
+        m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+        //-------------------------------------
+    }
+  </script>
+  <style>
+    VmInclude:__COMPONENT__/g/grid.01.css
+  </style>
