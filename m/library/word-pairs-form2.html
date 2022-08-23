@@ -1,0 +1,119 @@
+<div id=D__ID>
+  <!--third html start -->
+  <div class="container mt-95">
+    <!-- form container start -->
+    <div class="formbox">
+      <!-- form start -->
+      <form id="F__ID">
+        <span id=title__ID></span>
+        <!-- participant name and study id -->
+        <div id="participant_div__ID">
+          <div class="formgroup">
+            <fieldset class="dynbreaks">
+              <label><span class="question">Participant</span>
+                <input type=text name="Participant" class=formcontrol id=Participant__ID data-id="Participant" />
+              </label><br>
+              <label><span class="question">Participant ID</span>
+                <input type=text name="Participant_uid" class=formcontrol readonly />
+              </label>
+            </fieldset>
+          </div>
+        </div>
+        <div class="formgroup">
+          <fieldset class="">
+            <span class="question"><p>Multiple horizontal input</p></span>
+            <div class="grid-container-4">
+              <div><label><span class="question">Input 1</span>
+                  <input type=text name="mhi_1" class=formcontrol />
+                </label>
+              </div>
+              <div><label><span class="question">Input 2</span>
+                  <input type=text name="mhi_2" class=formcontrol />
+                </label>
+              </div>
+              <div><label><span class="question">Input 3</span>
+                  <input type=text name="mhi_3" class=formcontrol />
+                </label>
+              </div>
+              <div><label><span class="question">Input 4</span>
+                  <input type=text name="mhi_4" class=formcontrol />
+                </label>
+              </div>
+            </div>
+        </fieldset>
+    </div>
+    <div class="formgroup">
+      <div class="textcenter"><span class="question">Set 1</span></div>
+      <div class="questiongroup ">
+        <fieldset class="">
+          <div class="grid-container-6">
+            <div class="textleft"><span class="question"><br>Left Side</span></div>
+            <div class="textcenter">
+              <label >1 PM Recall</label><br>
+              <input id="wp1pmr_0__ID" name="wp1pmr" type="radio" value="0">
+              <label class="rd_btn" for="wp1pmr_0__ID">X</label>
+              <input id="wp1pmr_1__ID" name="wp1pmr" type="radio" value="1">
+              <label class="rd_btn" for="wp1pmr_1__ID">&check;</label>
+            </div>
+            <div class="textcenter">
+              <label >2 PM Recall</label><br>
+              <input id="wp2pmr_0__ID" name="wp2pmr" type="radio" value="0">
+              <label class="rd_btn" for="wp2pmr_0__ID">X</label>
+              <input id="wp2pmr_1__ID" name="wp2pmr" type="radio" value="1">
+              <label class="rd_btn" for="wp2pmr_1__ID">&check;</label>
+            </div>
+            <div class="textcenter">
+              <label >3 PM Recall</label><br>
+              <input id="wp3pmr_0__ID" name="wp3pmr" type="radio" value="0">
+              <label class="rd_btn" for="wp3pmr_0__ID">X</label>
+              <input id="wp3pmr_1__ID" name="wp3pmr" type="radio" value="1">
+              <label class="rd_btn" for="wp3pmr_1__ID">&check;</label>
+            </div>
+            <div class="textcenter">
+              <label >4 AM Recall</label><br>
+              <input id="wp1pmr_0__ID" name="wp1pmr" type="radio" value="0">
+              <label class="rd_btn" for="wp1pmr_0__ID">X</label>
+              <input id="wp1pmr_1__ID" name="wp1pmr" type="radio" value="1">
+              <label class="rd_btn" for="wp1pmr_1__ID">&check;</label>
+            </div>
+            <div class="textcenter">
+              <label >5 AM Recog</label><br>
+              <input id="wp1pmr_0__ID" name="wp1pmr" type="radio" value="0">
+              <label class="rd_btn" for="wp1pmr_0__ID">X</label>
+              <input id="wp1pmr_1__ID" name="wp1pmr" type="radio" value="1">
+              <label class="rd_btn" for="wp1pmr_1__ID">&check;</label>
+            </div>
+          </div>
+        </fieldset>
+        <br>
+      </div>
+    </div>
+
+    <div class="formgroup right">
+      <button type="submit" id="submit__ID" class="submit_btn">Submit</button>
+    </div>
+    </form>
+  </div>
+</div>
+<script>
+  function F__ID() {
+    //-------------------------------------
+    VmInclude: '__COMPONENT__/f/form.01.js'
+    VmInclude: '__CURRENT_PATH__/shared-form.js'
+    //-------------------------------------
+    var load2 = m.load;
+    m.load = function () {
+      load2();
+      $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
+    }
+    //-------------------------------
+    var before_submit = m.before_submit;
+    m.before_submit = function (data, index) {
+      return before_submit(data, index);
+    }
+  }
+</script>
+<style>
+VmInclude:__CURRENT_PATH__/wapp-form.css
+</style>
+</div>
