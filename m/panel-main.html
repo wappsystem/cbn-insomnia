@@ -45,13 +45,14 @@
                 if(href!=undefined){
                     href=href.replace('?\/','');
                     href=href.replace(/\//g,'_');
-                    if(app==undefined) $vm.load_module(href,'',{});
-                    //else if($vm.module_list[href]!=undefined) {
-                    else if(href.split('-')[0]=='word') {
-                        $vm.alert("If you want to run Word Pairs, you must start via Participant's page and Data Entry to get the correct Word Pairs Set.");
-                        //window.open($vm.module_list[href].url);
+                    if(href.split('-')[0]=='word') {
+                        $vm.alert("All Word Pairs tasks must start via Participant's page and Data Entry to get the correct Word Pairs Set order.");
                     }
-                    else alert("The '"+ href +"' is not defined in the module list");
+                    else{
+                        if(app==undefined) $vm.load_module(href,'',{});
+                        else if($vm.module_list[href]!=undefined) window.open($vm.module_list[href].url);
+                        else alert("The '"+ href +"' is not defined in the module list");
+                    }                    
                 }
             })
             //--------------------------------------------------------
