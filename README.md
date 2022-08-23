@@ -1,3 +1,5 @@
 # cupid
 
-Testing:    https://wappsystem.github.io/cbn-insomnia/  
+Study site: https://lab.cupidstudy.com.au/
+
+Testing site:    https://lab.cupidstudy.com.au?tb=demo  
