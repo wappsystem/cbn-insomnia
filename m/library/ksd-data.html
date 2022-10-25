@@ -8,9 +8,9 @@
         VmInclude:__COMPONENT__/g/grid.01.js
       VmInclude:__CURRENT_PATH__/shared-data.js
         //-------------------------------------
-        $('#title__ID').text('Karolinska Sleep Diary')
+        $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
         //-------------------------------------
-        var fields="ksd_date,ksd_1,ksd_1_comments,ksd_2,ksd_2_comments,ksd_3,ksd_3_comments,ksd_4,ksd_4_comments,ksd_5a,ksd_5_comments,ksd_6,ksd_6_comments,ksd_7,ksd_8,ksd_9,ksd_10,ksd_11,ksd_12,ksd_13,ksd_14,ksd_15,ksd_16,ksd_17";
+        var fields="ksd_date,ksd_actiwatch_time,ksd_1,ksd_1_comments,ksd_2,ksd_2_comments,ksd_3,ksd_3_comments,ksd_4,ksd_4_comments,ksd_5_h,ksd_5_m,ksd_5_comments,ksd_6,ksd_6_comments,ksd_7,ksd_8_h,ksd_8_m,ksd_9,ksd_10,ksd_11,ksd_12,ksd_13,ksd_14,ksd_15,ksd_16,ksd_17,ksd_18,ksd_19,ksd_20_1,ksd_20_2,ksd_20_3,ksd_20_4,ksd_20_5";
         m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Participant,"+fields+",Submit_date,Submitted_by,_Delete";
         //-------------------------------------
     }
