@@ -108,10 +108,10 @@
 			//-------------------------------------
             m.after_insert = function (data,res) {
                 //console.log(JSON.stringify(res.result.ops))
-                var rid=res.result.ops[0]._id
-                var uid=res.result.ops[0].UID;
+                var rid=res.nr._id
+                var uid=res.nr.UID;
                 data.Screening_Number= 'S'+uid.toString().padStart(3, "0")
-                data.Participant= data.Screening_Number+'_'+res.result.ops[0].Data.Subject_Initials;
+                data.Participant= data.Screening_Number+'_'+res.nr.Data.Subject_Initials;
                 $vm.request({cmd:'update',id:rid,table:m.Table,data:data},function(res){
                     //-----------------------------
                     if(res.status=="lk"){
