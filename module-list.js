@@ -31,6 +31,8 @@
 //Unscheduled
         "adverse-event-data-cupid":		{url:"$H/m/library/adverse-event-data.html",Table:"adverse-event-cupid",form_module:"adverse-event-form-cupid",task_name:"Unscheduled - Adverse Event"},
         "adverse-event-form-cupid":		{url:"$H/m/library/adverse-event-form.html",Table:"adverse-event-cupid",task_name:"Unscheduled - Adverse Event"},
+        "concom-medication-data-cupid":		{url:"$H/m/library/concom-medication-data.html",Table:"concom-medication-cupid",form_module:"concom-medication-form-cupid",task_name:"Unscheduled - Concomitant medications"},
+        "concom-medication-form-cupid":		{url:"$H/m/library/concom-medication-form.html",Table:"concom-medication-cupid",task_name:"Unscheduled - Concomitant medications"},
         "file-notes-data-cupid":		{url:"$H/m/library/file-notes-data.html",Table:"file-notes-cupid",form_module:"file-notes-form-cupid",task_name:"Unscheduled - File Notes"},
         "file-notes-form-cupid":		{url:"$H/m/library/file-notes-form.html",Table:"file-notes-cupid",task_name:"Unscheduled - File Notes"},
 //Screening
