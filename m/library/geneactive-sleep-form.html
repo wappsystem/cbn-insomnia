@@ -1,0 +1,160 @@
+<div id=D__ID>
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id="F__ID">
+                            <h3 id="title__ID"></h3>
+                            <!-- participant part for all tsak forms -------------------->
+                            <div id="participant_div__ID">
+                                <div class="row px-4">
+                                    <div class="col-sm-12 col-lg-9 ">
+                                        <span class=label__ID>Participant</span><br>
+                                        <input type=text name="Participant" class=form-control id=Participant__ID
+                                            data-id="Participant" />
+                                    </div>
+                                    <div class="col-sm-12 col-lg-3">
+                                        <span class=label__ID>Participant ID</span><br>
+                                        <input type=text name="Participant_uid" class=form-control readonly />
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <!-- form group -->
+                            <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                            <div class="form-group">
+                                <div class="pb-3">
+                                    <label><span>Set Status</span></label>
+                                    <fieldset class="">
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="_status" value="#FF0000">
+                                            <span class="checkmark"
+                                                style="background-color:#FF0000"></span>&nbsp;</label>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="_status" value="#FFCC00">
+                                            <span class="checkmark"
+                                                style="background-color:#FFCC00"></span>&nbsp;</label>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="_status" value="#00FF00">
+                                            <span class="checkmark"
+                                                style="background-color:#00FF00"></span>Manually&nbsp;&nbsp;</label>
+                                        <label class="radiobuttons">
+                                            <input type="radio" name="_status" value="" checked>
+                                            <span class="checkmark"
+                                                style="background-color:#C9C9C9"></span>Automatically</label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col'>
+                                    <span>File</span>
+                                    <div class="form-control">
+                                        <u style='cursor:pointer' id=link_File_Name__ID></u>
+                                        <br>
+                                        <input type="file" name=File_Name style="margin-top:6px" /> &nbsp&nbsp&nbsp
+                                        <button type="button" id=x_File_Name__ID>Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row px-4">
+                                <div class='col'>
+                                    <span>Specify which row should be read (Excel row number, first row=2) </span>
+                                    <div class="form-control">
+                                        <input type="number" id="datarow__ID" min="2" style="margin-top:6px" /> &nbsp&nbsp&nbsp
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div id=dynamic_part__ID></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    VmInclude:__COMPONENT__/m/model.01.html
+    <script>
+        //---------------------------------------------
+        function F__ID() {
+            //-------------------------------------
+            VmInclude: '__COMPONENT__/f/form.01.js'
+            VmInclude: '__CURRENT_PATH__/shared-form.js'
+            //-------------------------------------
+            var fields="dayLightsOn,clockLightsOut,clockLightsOn,cicadaVersion,matlabVersion,subject,device,samplingRate,epochLength,recStartDate,recEndDate,annotAccBoutCrit,annotAccBoutClosed,annotAccBoutMetric,annotAccThrInactAngle,annotAccThrInactTime,annotAccThrActTime,annotAccThrActLig,annotAccThrActMod,annotAccThrActVig,slpType,slpCount,eventOrigin,clockSlpOnset,clockMidSleep,clockFinAwake,slpOnsetLat,nAwakening,wakeAfterSlpOnset,snoozeTime,totSlpTime,slpPeriod,slpWindow,slpEffSlpTime,slpEffSlpPeriod,awakePerHour";
+			//-------------------------------------
+			var fs = fields.split(',');
+			var txt = "";
+			for (var i = 0; i < fs.length; i++) {
+				var type = "text"
+				//console.log(fs[i])
+                //console.log(i%4)
+                if(i%3==0) {txt+='<div class="row px-4">';}
+                //console.log(fs[i])
+				txt += '<div class="col-sm-12 col-lg-4"><label class=""><span class="">'+ fs[i] +'</span>';
+				txt += '<input class="form-control" type="text" name="'+ fs[i] +'" /></div>';
+                if(i%3==2 || i==fs.length-1) {txt+='</div>';}
+            }
+			$('#dynamic_part__ID').html(txt);
+            var row_to_read=0;
+            var rows=[];
+			//-------------------------------------
+            var load2 = m.load;
+            m.load = function () {
+                load2();
+                if (m.input.readonly != undefined) $('#submit__ID').hide();
+                //render_file_field_v2(m.input.record,'__ID',$('#File_Name__ID'));
+                m.set_file_link("File_Name");
+            }
+            //-------------------------------------
+            $('#F__ID input[name=File_Name]').on('change', function (evt) {
+                console.log(row_to_read)
+                if (this.files.length == 1) {
+                    file_process(this.files[0])
+                }
+            })
+            //-------------------------------------
+            $('#datarow__ID').on('change', function () {
+                if (parseInt($('#datarow__ID').val())>1) {
+                    row_to_read=parseInt($('#datarow__ID').val());
+                    if(rows.length>0){
+                        read_data(rows);
+                    }
+                }
+            })
+            //-------------------------------------
+            var file_process = function (file) {
+                var reader = new FileReader();
+                reader.onload = (function (e) {
+                    var contents = e.target.result;
+                    var lines = contents;
+                    rows=lines.replace(/"/g, '').replace(/\r/, '\n').replace(/\n\n/, '\n').split('\n');
+                    read_data(rows)
+                })
+                reader.readAsText(file);
+            }
+            //-------------------------------------
+            var read_data = function(rows){
+                var header=rows[0].split(',');
+                    var data=rows[row_to_read].split(',');
+                    console.log(data)
+                    for(var i=0;i<header.length;i++){
+                        if($('#F__ID input[name='+header[i]+']').length){
+                            $('#F__ID input[name='+header[i]+']').val(data[i])
+                        }
+                    }
+            }
+        }
+    </script>
+    <style>
+        #D__ID .mt-95 {
+            max-width: 800px;
+        }
+
+        VmInclude:__CURRENT_PATH__/wappsystem-form.css
+    </style>
+</div>

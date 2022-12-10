@@ -1,0 +1,29 @@
+<section>
+    VmInclude:__CURRENT_PATH__/grid.v1h.html
+</section>
+  <script>
+      function F__ID(){
+          //-------------------------------------
+          VmInclude:__COMPONENT__/g/grid.01.js
+          VmInclude:__CURRENT_PATH__/shared-data.js
+        //-------------------------------------
+        $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
+          //-------------------------------------
+          var fields="File_Name,cicadaVersion,matlabVersion,subject,device,samplingRate,epochLength,recStartDate,recEndDate,annotAccBoutCrit,annotAccBoutClosed,annotAccBoutMetric,annotAccThrInactAngle,annotAccThrInactTime,annotAccThrActTime,annotAccThrActLig,annotAccThrActMod,annotAccThrActVig,date,day,hoursValidData,hoursReject,avEuclNorm,maxEuclNormMovWin10h,clockOnsetMaxEuclNormMovWin10h,minEuclNormMovWin5h,clockOnsetMinEuclNormMovWin5h,relAmpl,hoursSustInact,avEuclNormSustInact,hoursLightAct,avEuclNormLightAct,hoursModVigAct,avEuclNormModVigAct,slpAcrossNoon,avLightWidespec,avLightWidespecGt1Lux,minLightWidespecMovWin30m,clockOnsetMinLightWidespecMovWin30m,maxLightWidespecMovWin30m,clockOnsetMaxLightWidespecMovWin30m,avTemperatureWrist,minTemperatureWristMovWin30m,clockOnsetMinTemperatureWristMovWin30m,maxTemperatureWristMovWin30m,clockOnsetMaxTemperatureWristMovWin30m";
+          m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+          //-------------------------------------
+          var cell_render=m.cell_render;
+            m.cell_render=function(records,I,field,td){
+                cell_render(records,I,field,td);
+                switch(field){
+                    case 'File_Name':
+                        m.set_file_link(records,I,field,td)
+                        break;
+                }
+            }
+            //-------------------------------------
+      }
+  </script>
+  <style>
+      VmInclude:__COMPONENT__/g/grid.01.css
+  </style>
