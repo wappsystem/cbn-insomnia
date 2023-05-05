@@ -31,6 +31,12 @@
 //Unscheduled
         "adverse-event-data-cupid":		{url:"$H/m/library/adverse-event-data.html",Table:"adverse-event-cupid",form_module:"adverse-event-form-cupid",task_name:"Unscheduled - Adverse Event"},
         "adverse-event-form-cupid":		{url:"$H/m/library/adverse-event-form.html",Table:"adverse-event-cupid",task_name:"Unscheduled - Adverse Event"},
+        "adverse-event-s1-data-cupid":		{url:"$H/m/library/adverse-event-data.html",Table:"adverse-event-cupid",form_module:"adverse-event-s1-form-cupid",task_name:"Unscheduled - Adverse Event Session 1"},
+        "adverse-event-s1-form-cupid":		{url:"$H/m/library/adverse-event-form.html",Table:"adverse-event-cupid",task_name:"Unscheduled - Adverse Event Session 1",session:"Session 1"},
+        "adverse-event-s2-data-cupid":		{url:"$H/m/library/adverse-event-data.html",Table:"adverse-event-cupid",form_module:"adverse-event-s2-form-cupid",task_name:"Unscheduled - Adverse Event Session 2"},
+        "adverse-event-s2-form-cupid":		{url:"$H/m/library/adverse-event-form.html",Table:"adverse-event-cupid",task_name:"Unscheduled - Adverse Event Session 2",session:"Session 2"},
+        "adverse-event-s3-data-cupid":		{url:"$H/m/library/adverse-event-data.html",Table:"adverse-event-cupid",form_module:"adverse-event-s3-form-cupid",task_name:"Unscheduled - Adverse Event Session 3"},
+        "adverse-event-s3-form-cupid":		{url:"$H/m/library/adverse-event-form.html",Table:"adverse-event-cupid",task_name:"Unscheduled - Adverse Event Session 3",session:"Session 3"},
         "concom-medication-data-cupid":		{url:"$H/m/library/concom-medication-data.html",Table:"concom-medication-cupid",form_module:"concom-medication-form-cupid",task_name:"Unscheduled - Concomitant medications"},
         "concom-medication-form-cupid":		{url:"$H/m/library/concom-medication-form.html",Table:"concom-medication-cupid",task_name:"Unscheduled - Concomitant medications"},
         "file-notes-data-cupid":		{url:"$H/m/library/file-notes-data.html",Table:"file-notes-cupid",form_module:"file-notes-form-cupid",task_name:"Unscheduled - File Notes"},

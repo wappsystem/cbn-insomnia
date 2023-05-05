@@ -8,7 +8,7 @@
                     <div class="col-12">
                         <!-- form start -->
                         <form id="F__ID">
-                            <h3>Adverse Event</h3>
+                            <h3 id=title__ID>Adverse Event</h3>
                             <!-- participant part for all tsak forms -------------------->
                             <div id="participant_div__ID">
                                 <div class="form-group">
@@ -29,6 +29,28 @@
                                     <fieldset class="">
                                         <label style="width:100%"><span class="">Adverse Event</span>
                                             <input type=text class="form-control" name="Adverse_Event" placeholder="">
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Session Number</span>
+                                            <select name="Session_number" class=form-control>
+                                                <option></option>
+                                                <option>Session 1</option>
+                                                <option>Session 2</option>
+                                                <option>Session 3</option>
+                                            </select>
+                                        </label><br>
+                                        <label><span class="">When was AE reported?</span>
+                                            <select name="AE_Reported" class=form-control>
+                                                <option></option>
+                                                <option>During treatment session</option>
+                                                <option>8-hour follow up</option>
+                                                <option>7-day follow up</option>
+                                            </select>
                                         </label><br>
                                     </fieldset>
                                 </div>
@@ -182,6 +204,12 @@
             VmInclude:'__COMPONENT__/f/form.01.js'
             VmInclude:__CURRENT_PATH__/shared-form.js
             //-------------------------------------
+			var load2=m.load;
+			m.load=function(){
+				load2();
+                if(m.input.record==undefined) $('#D__ID select[name=Session_number]').val($vm.module_list[$vm.vm['__ID'].name].session);
+            }
+
         }
     </script>
     <style>
