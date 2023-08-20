@@ -7,23 +7,23 @@
         	<span id=elapsed__ID style='float:right'></span>
 		</div>
         <section id=panel__ID>
-			<h3>Screened</h3>
+			<!--<h3>Enrolled</h3>-->
 			<span>Select the fields to export by clicking on each form links.</span><br>
-        	<div class='nav__ID'>
+			<div class='nav__ID'>
         		<ul>
 					<li title="Manage participant - Add new. Data entry for single participant. Setup questionnaires."><a href=?/participant-data>Participants</a></li>
-					<p id=participant-data__ID class="small font-italic text-muted mt-1">Latest entry shown</p>
+					<p id=participant-data__ID class="small font-italic text-muted mt-1">Default - All fields</p>
 				</ul>
-        	VmInclude:__CURRENT_PATH__/panel-tasks-export-screened.html
+        	VmInclude:__CURRENT_PATH__/panel-tasks-export-enrolled-session-1.html
         </section>
 	</div>
 	VmInclude:__COMPONENT__/m/model.01.html
     <script>
         function F__ID(){
-			console.log("export")
 			//-------------------------------------
-			var output_file_name="CUPID Screened Export";
-			var enrolled_only=false;
+			
+			var output_file_name="CUPID Enrolled Session 1 Export";
+			var enrolled_only=true
 			VmInclude: __CURRENT_PATH__/export.js
 			//-------------------------------------
 		}

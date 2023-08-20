@@ -4,7 +4,9 @@
         "panel-child-cupid":              {url:"$H/m/panel-child.html"},
         "panel-library-cupid":    		{url:"$H/m/panel-library.html",router:1},
         "panel-export-screening-cupid":   {url:"$H/m/export/panel-export-screened.html",router:1},
-        "panel-export-enrolled-cupid":    {url:"$H/m/export/panel-export-enrolled.html",router:1},
+        "panel-export-enrolled-session-1-cupid":    {url:"$H/m/export/panel-export-enrolled-session-1.html",router:1},
+        "panel-export-enrolled-session-2-cupid":    {url:"$H/m/export/panel-export-enrolled-session-2.html",router:1},
+        "panel-export-enrolled-session-3-cupid":    {url:"$H/m/export/panel-export-enrolled-session-3.html",router:1},
         "export-data":		                {url:"$H/m/export/export-data.html",Table:"export-cupid",form_module:"export-form"},
         "export-form":		                {url:"$H/m/export/export-form.html",Table:"export-cupid"},
         
