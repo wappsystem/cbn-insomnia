@@ -140,9 +140,33 @@ var process_lock=function(I){
 m.export_records=function(){
     var req_count=0;
     tabledata=m.Table;
+    //------------------------------------
+    // Get session and timepoint
+    //------------------------------------
+    var ses_no="";
+    var tp="";
+    console.log(tabledata);
+    if(tabledata.indexOf("-s-")!=-1) ses_no="s0"
+    else{
+        if(tabledata.indexOf("-pts")!=-1) ses_no="s"+tabledata.slice(ses+4,ses+5)
+        else{
+            ses=tabledata.indexOf("-ts");
+            if(ses!=-1) {
+                ses_no="s"+tabledata.slice(ses+4,ses+5)
+                if(tabledata.indexOf("-t1-")!=-1) tp="t1";
+                else if(tabledata.indexOf("-t2-")!=-1) tp="t2";
+                else if(tabledata.indexOf("-t3-")!=-1) tp="t3";
+                else if(tabledata.indexOf("-t4-")!=-1) tp="t4";
+            }
+        }
+    }
+    console.log("Ses: "+ses_no+ " - "+"TP: "+tp)
+    //------------------------------------
     m.Table=$vm.module_list['participant-data'].Table;
     var participant_rec={};
-    var req={cmd:"export",table:m.Table,I1:m.I1,search:$('#keyword__ID').val()}
+    var query={};
+    if($('#screened__ID:checked').val()!='on') query={'Data.Randomisation_Number':{$ne:''}};
+    var req={cmd:"export",table:m.Table,I1:m.I1,query:query,search:$('#keyword__ID').val()}
     var output_data=[];
     open_model__ID();
     $vm.request(req,function(N,i,txt){
@@ -196,6 +220,8 @@ m.export_records=function(){
         var empty_item={}
         for(var i=0;i<participant_fields.length;i++){
             empty_item[participant_fields[i]]="";
+            //if(participant_fields[i]=="Session") empty_item[participant_fields[i]]=ses_no;
+            //if(participant_fields[i]=="Time_point") empty_item[participant_fields[i]]=tp;
         }
         for(var i=0;i<export_fields.length;i++){
             empty_item[export_fields[i]]="";
@@ -210,8 +236,20 @@ m.export_records=function(){
                     //Get a new empty object
                     empty_item2=(JSON.parse(JSON.stringify(empty_item)));
                     for( var ll=0;ll<participant_fields.length;ll++){
-                        if(participant_rec[ii].hasOwnProperty(participant_fields[ll])){
-                            empty_item2[participant_fields[ll]]=participant_rec[ii][participant_fields[ll]];
+                        console.log("A: "+participant_rec[ii][participant_fields[ll]])
+                        console.log("part field:" +participant_fields[ll])
+                        console.log(empty_item2[participant_fields[ll]])
+                        if(participant_fields[ll]=="Session"){
+                            empty_item2[participant_fields[ll]]=ses_no;
+                        }
+                        else if(participant_fields[ll]=="Time_point"){
+                            empty_item2[participant_fields[ll]]=tp;
+
+                        }
+                        else{
+                            if(participant_rec[ii].hasOwnProperty(participant_fields[ll])){
+                                empty_item2[participant_fields[ll]]=participant_rec[ii][participant_fields[ll]];
+                            }
                         }
                     }
                     for( var ll=0;ll<export_fields.length;ll++){
@@ -225,8 +263,17 @@ m.export_records=function(){
                 else if(kk==task_rec.length-1){
                     empty_item2={};
                     for( var ll=0;ll<participant_fields.length;ll++){
-                        if(participant_rec[ii].hasOwnProperty(participant_fields[ll])){
-                            empty_item2[participant_fields[ll]]=participant_rec[ii][participant_fields[ll]];
+                        if(participant_fields[ll]=="Session"){
+                            empty_item2[participant_fields[ll]]=ses_no;
+                        }
+                        else if(participant_fields[ll]=="Time_point"){
+                            empty_item2[participant_fields[ll]]=tp;
+
+                        }
+                        else{
+                            if(participant_rec[ii].hasOwnProperty(participant_fields[ll])){
+                                empty_item2[participant_fields[ll]]=participant_rec[ii][participant_fields[ll]];
+                            }
                         }
                     }
                     for( var ll=0;ll<export_fields.length;ll++){
