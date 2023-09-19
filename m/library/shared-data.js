@@ -145,9 +145,11 @@ m.export_records=function(){
     //------------------------------------
     var ses_no="";
     var tp="";
+    var ses=-1;
     console.log(tabledata);
     if(tabledata.indexOf("-s-")!=-1) ses_no="s0"
     else{
+        ses=tabledata.indexOf("-pts");
         if(tabledata.indexOf("-pts")!=-1) ses_no="s"+tabledata.slice(ses+4,ses+5)
         else{
             ses=tabledata.indexOf("-ts");
