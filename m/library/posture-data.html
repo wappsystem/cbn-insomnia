@@ -13,6 +13,7 @@
       m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Participant,File_Name,"+dyn_fields+",Submit_date,Submitted_by,_Delete";
       //-------------------------------------
       m.load=function(){
+        $('#eyes_open_close__ID').show();
         $vm.dyn_fields=dyn_fields;
       }
       var cell_render=m.cell_render;

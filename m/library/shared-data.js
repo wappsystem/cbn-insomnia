@@ -7,6 +7,12 @@ m.set_req=function(){
     }
     else{
         m.query={Table:m.Table}
+        if(m.Table.indexOf("posture")!=-1){
+            var eye="Eyes Closed"
+            if($('#eye__ID:checked').val()=='on') eye="Eyes Open";
+
+            m.query={Table:m.Table,"Data.Sub_Type": { "$eq": eye }}
+        }
     }
 };
 //-------------------------------------
@@ -146,7 +152,7 @@ m.export_records=function(){
     var ses_no="";
     var tp="";
     var ses=-1;
-    console.log(tabledata);
+    //console.log(tabledata);
     if(tabledata.indexOf("-s-")!=-1) ses_no="s0"
     else{
         ses=tabledata.indexOf("-pts");
@@ -179,12 +185,17 @@ m.export_records=function(){
             var len=txt.length;
             var data_rec="["+txt.substring(5,len-9)+"]";
             participant_rec=JSON.parse(data_rec);
-            console.log(JSON.stringify(participant_rec))
+            //console.log(JSON.stringify(participant_rec))
         }
     });
     var task_rec={};
     m.Table=tabledata;
-    var req={cmd:"export",table:m.Table,I1:m.I1,search:$('#keyword__ID').val()}
+    if(m.Table.indexOf("posture")!=-1){
+        var eye="Eyes Closed"
+        if($('#eye__ID:checked').val()=='on') eye="Eyes Open";
+        query={"Data.Sub_Type": { "$eq": eye }}
+    }
+    var req={cmd:"export",table:m.Table,query:query,I1:m.I1,search:$('#keyword__ID').val()}
     $vm.request(req,function(N,i,txt){
         //console.log(i+"/"+N);
         $('#msg__ID').text((100*i/N).toFixed(0)+"%");
@@ -193,7 +204,7 @@ m.export_records=function(){
             var len=txt.length;
             var data_rec="["+txt.substring(5,len-9)+"]";
             task_rec=JSON.parse(data_rec);
-            console.log(JSON.stringify(task_rec))
+            //console.log(JSON.stringify(task_rec))
         }
     });
     check();
@@ -238,9 +249,9 @@ m.export_records=function(){
                     //Get a new empty object
                     empty_item2=(JSON.parse(JSON.stringify(empty_item)));
                     for( var ll=0;ll<participant_fields.length;ll++){
-                        console.log("A: "+participant_rec[ii][participant_fields[ll]])
-                        console.log("part field:" +participant_fields[ll])
-                        console.log(empty_item2[participant_fields[ll]])
+                        //console.log("A: "+participant_rec[ii][participant_fields[ll]])
+                        //console.log("part field:" +participant_fields[ll])
+                        //console.log(empty_item2[participant_fields[ll]])
                         if(participant_fields[ll]=="Session"){
                             empty_item2[participant_fields[ll]]=ses_no;
                         }
