@@ -16,6 +16,9 @@
         $('#eyes_open_close__ID').show();
         $vm.dyn_fields=dyn_fields;
       }
+      $('#eye__ID').on('click',function(){
+        $('#query__ID').click();
+      })
       var cell_render=m.cell_render;
       m.cell_render=function(records,I,field,td){
           cell_render(records,I,field,td);
